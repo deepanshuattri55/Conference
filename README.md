@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PaperConf API
 
 PaperConf is a RESTful API for managing academic conferences, papers, reviewers, and reviews. It provides endpoints for performing various actions such as user registration, paper submission, reviewer assignment, and review submission.
@@ -84,3 +85,6 @@ If you encounter any issues or have suggestions for improvement, please open an 
 ## License
 
 This project is licensed under the [MIT License](https://github.com/babypluto-ai/paperconf/blob/updates/LICENSE).
+=======
+# Conference
+>>>>>>> 2bf4113618854590bdb5cbf5cd7316e4f61a75e5
