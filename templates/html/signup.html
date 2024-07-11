@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            background-color: white;
+            width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .left-panel {
+            background-color: #3cb371;
+            color: white;
+            padding: 40px;
+            width: 50%;
+            text-align: center;
+        }
+        .left-panel h2 {
+            margin-bottom: 10px;
+        }
+        .left-panel p {
+            margin-top: 0;
+        }
+        .right-panel {
+            padding: 40px;
+            width: 50%;
+        }
+        .right-panel input[type="text"],
+        .right-panel input[type="email"],
+        .right-panel input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .right-panel input[type="checkbox"] {
+            margin: 10px 5px 10px 0;
+        }
+        .right-panel input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .right-panel input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .right-panel a {
+            color: #28a745;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Sign up</h2>
+            <p>to use all features of the application</p>
+        </div>
+        <div class="right-panel">
+            <form id="signup-form" method="POST">
+                {% csrf_token %}
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="affiliation" placeholder="Affiliation" required>
+                <input type="text" name="country" placeholder="Country" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="repeat_password" placeholder="Repeat Password" required>
+                <div>
+                    <input type="checkbox" name="terms" required> By signing up I agree with <a href="#">terms and conditions</a>
+                </div>
+                <input type="submit" value="Sign up">
+                <p>or <a href="http://127.0.0.1:8000/api/user/login/">Log in</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

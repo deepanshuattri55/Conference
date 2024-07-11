@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authors</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  <style>
+    .sidebar {
+        height: 100vh;
+        /*background-color: rgba(248, 249, 250, 0.7); */
+        width: 70px; /* Adjust width as needed */
+      }
+      /* Style for sidebar links */
+      .sidebar button {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #2441e3; /* Text color */
+        display: block;
+      }
+      /* Active link style */
+      .sidebar button.active {
+        background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+        color: #fff; /* White text color */
+      }
+      /* Adjustments for the right sidebar */
+      .right-sidebar {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 90px; /* Adjust width as needed */
+      }
+      /* Style for right sidebar links */
+      .right-sidebar a,
+      .right-sidebar button {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #2441e3; /* Text color */
+        display: block;
+      }
+      /* Active link style for right sidebar */
+      .right-sidebar a.active,
+      .right-sidebar button.active {
+        background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+        color: #fff; /* White text color */
+      }
+      body {
+        background-image: url('/html/images/istockphoto-1358004763-612x612.jpg'); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%; /* Set height to fill entire viewport */
+      }
+      /* Adjust the size of icons */
+      .dropdown-menu .dropdown-item {
+        color: #333; /* Text color */
+      }
+      
+      .vertical-bar {
+        width: 5px;
+        height: 100%;
+        background-color: red;
+        margin-right: 10px;
+    }
+    .careers-header {
+        font-size: 24px;
+        font-weight: bold;
+        color: #0056b3;
+    }
+    .careers-container {
+        margin-top: 40px;
+    }
+    .careers-list li {
+        margin-bottom: 10px;
+    }
+    .header-container {
+        display: flex;
+        align-items: center;
+    }
+    .card {
+        background-color: #ffffff47;
+        max-width: 1000px;
+        margin: auto;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-0 sidebar">
+        <button class="btn btn-link active"><i class="fas fa-home"></i> Home</button>
+       <button class="btn btn-link"><i class="fas fa-info-circle"></i> About</button>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>Services</span>
+          <i class="fas fa-angle-down fas fa-cogs" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="conference_create.html">Create Conference</a>
+          <a class="dropdown-item" href="#">License Info</a>
+          <a class="dropdown-item" href="#">License Pricing</a>
+          <a class="dropdown-item" href="#">FAQ</a>
+        </div>
+      </div>
+      
+        <button class="btn btn-link"><i class="fas fa-address-book"></i> Contact</button>
+        <button class="btn btn-link justify-content-end"><i class="fas fa-cog"></i> Settings</button>
+
+      </div>
+
+      <div class="container mt-5">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>New Submission for IEECSC 2024 (Track 1: Electrical Machines and Drives)</h2>
+            </div>
+            <div class="card-body">
+                <p>Please carefully follow the instructions provided below and complete each step before using the "Submit" button at the end of the form. Required fields are marked with an asterisk (*).</p>
+                <p><strong><h4>Author Information:</h4></strong><br>
+                Please fill out the form below for each author. Here are some clarifications:</p>
+                <ul>
+                    <li><strong>Email addresses</strong> will only be utilized for communication with the authors and will not be displayed on public conference web pages. For non-corresponding authors, the email address can be omitted. Such authors will not have access to the submission page.</li>
+                    <li><strong>Web pages</strong> can be used on the conference website, such as for creating the program. It should link to the author's personal webpage, not their organization's.</li>
+                    <li>Authors designated as <strong>corresponding authors</strong> will receive email notifications from the system regarding this submission. At least one corresponding author must be designated.</li>
+                </ul>
+                <form id="submissionForm" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="title">Title: <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="title" placeholder="Enter title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="abstract">Abstract: <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="abstract" rows="5" placeholder="Enter abstract" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="keywords">Keywords: <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="keywords" rows="3" placeholder="Enter keywords, one per line" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="paper">Paper: <span class="text-danger">*</span></label>
+                        <input type="file" class="form-control-file" id="paper" accept=".pdf" required>
+                    </div>
+                    <br>
+                    <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">Author 1 (<a href="#" class="card-link">click here to add yourself</a>)</h5>
+                          <form>
+                              <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                      <label for="firstName">First name <span class="text-danger">*</span></label>
+                                      <input type="text" class="form-control" id="firstName" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                      <label for="lastName">Last name <span class="text-danger">*</span></label>
+                                      <input type="text" class="form-control" id="lastName" required>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="email">Email <span class="text-danger">*</span></label>
+                                  <input type="email" class="form-control" id="email" required>
+                              </div>
+                              <div class="form-group">
+                                  <label for="country">Country/region <span class="text-danger">*</span></label>
+                                  <select class="form-control" id="country" required>
+                                      <option value="">Select country/region</option>
+                                      <option value="USA">USA</option>
+                                      <option value="Canada">Canada</option>
+                                      <option value="UK">UK</option>
+                                      <!-- Add more countries as needed -->
+                                  </select>
+                              </div>
+                              <div class="form-group">
+                                  <label for="affiliation">Affiliation <span class="text-danger">*</span></label>
+                                  <input type="text" class="form-control" id="affiliation" required>
+                              </div>
+                              <div class="form-group">
+                                  <label for="webpage">Web page</label>
+                                  <input type="url" class="form-control" id="webpage">
+                              </div>
+                              <div class="form-group form-check">
+                                  <input type="checkbox" class="form-check-input" id="correspondingAuthor">
+                                  <label class="form-check-label" for="correspondingAuthor">Corresponding author</label>
+                              </div>
+                              
+                          </form>
+                      </div>
+                  </div>
+                    <div id="authorsContainer"></div>
+                    <p class="mt-3"><a href="#" id="addAuthorLink">Click here to add more authors</a></p>
+                    <p class="text-muted">† Note: leave first name blank if there is no first name. If you are not sure how to divide a name into the first and last name, read <a href="#">the Help article about names</a>.</p>
+                    <p>Ready? If you filled out the form, press the 'Submit' button below.<strong> Do not press the button twice: uploading may take time!</strong></p>
+                    <button type="submit" class="btn btn-primary mt-4 d-block mx-auto">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+      <!-- Right Sidebar -->
+      <div class="right-sidebar">
+        <div class="dropdown">
+          <button class="btn btn-link dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <i class="fas fa-user"></i>
+              Profile
+            </div>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="/TESTABCDE.HTML"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a class="dropdown-item" href="/profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid" style="background-color: #4e6a89; color:#fff; padding: 20px;"> <!-- Added padding to the container -->
+    <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: left; margin-left: 100px; margin-right:20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">SERVICES</span>
+                    <li><a href="/conference_create.html" style="color: #fff;">Conference management</a></li>
+                    <li><a href="/registration_info.html" style="color: #fff;">Registration</a></li>
+                    <li><a href="/publishing" style="color: #fff;">Publishing</a></li>
+                    <li><a href="/smart_cfp" style="color: #fff;">Smart CFP</a></li>
+                    <li><a href="/smart_slide" style="color: #fff;">Smart Slide</a></li>
+                    <li><a href="/smart_program" style="color: #fff;">Smart Program</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 40px; margin-left:0px;"> <!-- Adjusted margin-left -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">ABOUT US</span>
+                    
+                    <li><a href="/contact" style="color: #fff;">Contact</a></li>
+                    <li><a href="/jobs" style="color: #fff;">Careers</a></li>
+                    <li><a href="/testimonials" style="color: #fff;">Testimonials</a></li>
+                    <li><a href="/policy" style="color: #fff;">Policy for conferences</a></li>
+                    <li><a href="/privacy" style="color: #fff;">Privacy</a></li>
+                    <li><a href="/terms" style="color: #fff;">Terms of service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">CONFERENCES</span>
+                    <li><a href="/installation" style="color: #fff;">Create conference</a></li>
+                    <li><a href="/licenses" style="color: #fff;">Licenses and pricing</a></li>
+                    <li><a href="/faq" style="color: #fff;">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 100px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul class="qlinks" style="list-style-type: none; padding: 0;">
+                    <li>
+                        <span class="bold contact-us">CONTACT US</span>
+                    </li>
+                    <li style="display: inline-block; margin-right: 10px;"> <!-- Adjusted margin-right -->
+                        <a title="Linked In" href="https://www.linkedin.com/company/easychair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img title="Linked In" alt="Linked In" src="/html/images/images.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                    <li style="display: inline-block;"> <!-- Adjusted margin-right -->
+                        <a title="Twitter" href="https://twitter.com/WeEasyChair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img class="twitter-icon" alt="Twitter" title="Twitter" src="/html/images/124021.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #39516b; color:#fff; padding: 20px;"> 
+    <div class="stripe colors-copyright">
+        <div class="segment">
+            <div class="content-row">
+                <div class="to-center" style="text-align: center;"> <!-- Added text-align: center; -->
+                    <img class="chair-alignment" src="/images/chairEC.gif">Copyright © 2002-2024 EasyChair
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    document.getElementById('addAuthorLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        addAuthorForm();
+    });
+
+    let authorIndex = 1;
+
+    function addAuthorForm() {
+      authorIndex++;
+      const authorsContainer = document.getElementById('authorsContainer');
+      const authorCard = document.createElement('div');
+      authorCard.className = 'card mt-4';
+      authorCard.innerHTML = `
+          <div class="card-body">
+              <h5 class="card-title">Author ${authorIndex} </h5>
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                      <label for="firstName${authorIndex}">First name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="firstName${authorIndex}" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <label for="lastName${authorIndex}">Last name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="lastName${authorIndex}" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="email${authorIndex}">Email <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="email${authorIndex}" required>
+              </div>
+              <div class="form-group">
+                  <label for="country${authorIndex}">Country/region <span class="text-danger">*</span></label>
+                  <select class="form-control" id="country${authorIndex}" required>
+                      <option value="">Select country/region</option>
+                      ${countries.map(country => `<option value="${country}">${country}</option>`).join('')}
+                  </select>
+              </div>
+              <div class="form-group">
+                  <label for="affiliation${authorIndex}">Affiliation <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="affiliation${authorIndex}" required>
+              </div>
+              <div class="form-group">
+                  <label for="webpage${authorIndex}">Web page</label>
+                  <input type="url" class="form-control" id="webpage${authorIndex}">
+              </div>
+              <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="correspondingAuthor${authorIndex}">
+                  <label class="form-check-label" for="correspondingAuthor${authorIndex}">Corresponding author</label>
+              </div>
+          </div>
+      `;
+      authorsContainer.appendChild(authorCard);
+  }
+  
+    const countries = [
+    "Afghanistan",
+    "Albania",
+    "Algeria",
+    "Andorra",
+    "Angola",
+    "Antigua and Barbuda",
+    "Argentina",
+    "Armenia",
+    "Australia",
+    "Austria",
+    "Azerbaijan",
+    "Bahamas",
+    "Bahrain",
+    "Bangladesh",
+    "Barbados",
+    "Belarus",
+    "Belgium",
+    "Belize",
+    "Benin",
+    "Bhutan",
+    "Bolivia",
+    "Bosnia and Herzegovina",
+    "Botswana",
+    "Brazil",
+    "Brunei",
+    "Bulgaria",
+    "Burkina Faso",
+    "Burundi",
+    "Cabo Verde",
+    "Cambodia",
+    "Cameroon",
+    "Canada",
+    "Central African Republic",
+    "Chad",
+    "Chile",
+    "China",
+    "Colombia",
+    "Comoros",
+    "Congo, Democratic Republic of the",
+    "Congo, Republic of the",
+    "Costa Rica",
+    "Croatia",
+    "Cuba",
+    "Cyprus",
+    "Czech Republic",
+    "Denmark",
+    "Djibouti",
+    "Dominica",
+    "Dominican Republic",
+    "East Timor (Timor-Leste)",
+    "Ecuador",
+    "Egypt",
+    "El Salvador",
+    "Equatorial Guinea",
+    "Eritrea",
+    "Estonia",
+    "Eswatini",
+    "Ethiopia",
+    "Fiji",
+    "Finland",
+    "France",
+    "Gabon",
+    "Gambia",
+    "Georgia",
+    "Germany",
+    "Ghana",
+    "Greece",
+    "Grenada",
+    "Guatemala",
+    "Guinea",
+    "Guinea-Bissau",
+    "Guyana",
+    "Haiti",
+    "Honduras",
+    "Hungary",
+    "Iceland",
+    "India",
+    "Indonesia",
+    "Iran",
+    "Iraq",
+    "Ireland",
+    "Israel",
+    "Italy",
+    "Ivory Coast",
+    "Jamaica",
+    "Japan",
+    "Jordan",
+    "Kazakhstan",
+    "Kenya",
+    "Kiribati",
+    "Korea, North",
+    "Korea, South",
+    "Kosovo",
+    "Kuwait",
+    "Kyrgyzstan",
+    "Laos",
+    "Latvia",
+    "Lebanon",
+    "Lesotho",
+    "Liberia",
+    "Libya",
+    "Liechtenstein",
+    "Lithuania",
+    "Luxembourg",
+    "Madagascar",
+    "Malawi",
+    "Malaysia",
+    "Maldives",
+    "Mali",
+    "Malta",
+    "Marshall Islands",
+    "Mauritania",
+    "Mauritius",
+    "Mexico",
+    "Micronesia",
+    "Moldova",
+    "Monaco",
+    "Mongolia",
+    "Montenegro",
+    "Morocco",
+    "Mozambique",
+    "Myanmar (Burma)",
+    "Namibia",
+    "Nauru",
+    "Nepal",
+    "Netherlands",
+    "New Zealand",
+    "Nicaragua",
+    "Niger",
+    "Nigeria",
+    "North Macedonia",
+    "Norway",
+    "Oman",
+    "Pakistan",
+    "Palau",
+    "Palestine",
+    "Panama",
+    "Papua New Guinea",
+    "Paraguay",
+    "Peru",
+    "Philippines",
+    "Poland",
+    "Portugal",
+    "Qatar",
+    "Romania",
+    "Russia",
+    "Rwanda",
+    "Saint Kitts and Nevis",
+    "Saint Lucia",
+    "Saint Vincent and the Grenadines",
+    "Samoa",
+    "San Marino",
+    "Sao Tome and Principe",
+    "Saudi Arabia",
+    "Senegal",
+    "Serbia",
+    "Seychelles",
+    "Sierra Leone",
+    "Singapore",
+    "Slovakia",
+    "Slovenia",
+    "Solomon Islands",
+    "Somalia",
+    "South Africa",
+    "South Sudan",
+    "Spain",
+    "Sri Lanka",
+    "Sudan",
+    "Suriname",
+    "Sweden",
+    "Switzerland",
+    "Syria",
+    "Taiwan",
+    "Tajikistan",
+    "Tanzania",
+    "Thailand",
+    "Togo",
+    "Tonga",
+    "Trinidad and Tobago",
+    "Tunisia",
+    "Turkey",
+    "Turkmenistan",
+    "Tuvalu",
+    "Uganda",
+    "Ukraine",
+    "United Arab Emirates",
+    "United Kingdom",
+    "United States",
+    "Uruguay",
+    "Uzbekistan",
+    "Vanuatu",
+    "Vatican City",
+    "Venezuela",
+    "Vietnam",
+    "Yemen",
+    "Zambia",
+    "Zimbabwe"
+];
+document.addEventListener("DOMContentLoaded", function() {
+  const countrySelects = document.querySelectorAll('[id^="country"]');
+  countrySelects.forEach(select => {
+      countries.forEach(country => {
+          const option = document.createElement("option");
+          option.value = country;
+          option.textContent = country;
+          select.appendChild(option);
+      });
+  });
+});
+
+</script>
+</body>
+</html>

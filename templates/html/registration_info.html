@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Information</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+  .sidebar {
+      height: 100vh;
+      position: fixed;
+      width: 70px; /* Adjust width as needed */
+  }
+  /* Style for sidebar links */
+  .sidebar button {
+      padding: 6px 12px;
+      text-decoration: none;
+      font-size: 16px;
+      color: #ffffff; /* Text color */
+      display: block;
+  }
+  /* Active link style */
+  .sidebar button.active {
+      background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+      color: #fff; /* White text color */
+  }
+  /* Adjustments for the right sidebar */
+  .right-sidebar {
+      height: 100vh;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 90px; /* Adjust width as needed */
+  }
+  /* Style for right sidebar links */
+  .right-sidebar a,
+  .right-sidebar button {
+      padding: 6px 12px;
+      text-decoration: none;
+      font-size: 16px;
+      color: #ffffff; /* Text color */
+      display: block;
+  }
+  /* Active link style for right sidebar */
+  .right-sidebar a.active,
+  .right-sidebar button.active {
+      background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+      color: #fff; /* White text color */
+  }
+  /* Fill background image to entire screen */
+  body {
+      background-image: url('{%static "images/images11111.jpg"%}'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100%; /* Set height to fill entire viewport */
+      filter: blur(-20px); 
+      z-index: -1;
+  }
+  /* Adjust the size of icons */
+  .dropdown-menu .dropdown-item {
+      color: #333; /* Text color */
+  }
+</style>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-0 sidebar">
+        <button class="btn btn-link active"><i class="fas fa-home"></i> Home</button>
+        <button class="btn btn-link"><i class="fas fa-info-circle"></i> About</button>
+        <div class="dropdown">
+          <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>Services</span>
+            <i class="fas fa-angle-down fas fa-cogs" style="margin-top: 5px;"></i>
+          </button>
+          <!-- Dropdown menu for Services -->
+          <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <a class="dropdown-item" href="conference_create.html">Create Conference</a>
+            <a class="dropdown-item" href="#">License Info</a>
+            <a class="dropdown-item" href="#">License Pricing</a>
+            <a class="dropdown-item" href="#">FAQ</a>
+          </div>
+        </div>
+        <button class="btn btn-link"><i class="fas fa-address-book"></i> Contact</button>
+        <button class="btn btn-link justify-content-end"><i class="fas fa-cog"></i> Settings</button>
+      </div>
+
+      <body style="color: rgb(255, 255, 255);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12" style="padding-left: 60px; padding:20px;">
+              <h1 style="text-align: left; margin-top: 40px;">Our Registration Service Features</h1><br>
+              <p>Our rapidly expanding online registration service offers comprehensive features to streamline attendee registration and payment processing. Our platform enables registration managers to effortlessly create and customize forms according to their specific needs, with the flexibility to extensively test forms before going live.</p>
+              <ol>
+                <li><strong>Key Features:</strong>
+                  <ul>
+                    <li>Creation and customization of user-friendly forms</li>
+                    <li>Advanced pricing and fee calculations through customizable formulas</li>
+                    <li>Ability to set different prices for various registration periods and types</li>
+                    <li>Data import and export functionality</li>
+                    <li>Dedicated technical and customer support</li>
+                    <li>Assistance with registration form design</li>
+                  </ul>
+                </li><br>
+                <li><strong>Secure Payment Options:</strong>
+                  <ul>
+                    <li>Safe and secure payment methods for attendees</li>
+                    <li>Online payments accepted in 14 different currencies</li>
+                    <li>Wire transfers available in 8 currencies</li>
+                    <li>Low-rate settlements offered in alternative currencies, enabling organizations to manage accounts in one currency while conducting registrations in another</li>
+                  </ul>
+                </li><br>
+                <li><strong>Permissions for Registration Managers:</strong>
+                  <ul>
+                    <li>Various permission levels for registration managers</li>
+                    <li>Data access policies implemented to ensure confidentiality and security</li>
+                    <li>Payment information management and decision-making policies in place</li>
+                  </ul>
+                </li><br>
+              </ol>
+              <p>If you encounter any issues or need assistance during the process, our support team is available to help you.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Registration Form -->
+        {% comment %} <div class="container mt-5">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Register
+                </div>
+                <div class="card-body">
+                  <form id="registerForm" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                      <label for="username">Username</label>
+                      <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> {% endcomment %}
+      
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+          <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <i class="fas fa-user"></i>
+                Profile
+              </div>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="login.html">Login</a>
+              <a class="dropdown-item" href="signup.html">Signup</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container-fluid" style="background-color: #4e6a89; color:#fff; padding: 20px;">
+      <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: left; margin-left: 100px; margin-right:20px;">
+          <div class="qlinks">
+            <ul>
+              <span class="bold">SERVICES</span>
+              <li><a href="/conference" style="color: #fff;">Conference management</a></li>
+              <li><a href="/registration" style="color: #fff;">Registration</a></li>
+              <li><a href="/publishing" style="color: #fff;">Publishing</a></li>
+              <li><a href="/smart_cfp" style="color: #fff;">Smart CFP</a></li>
+              <li><a href="/smart_slide" style="color: #fff;">Smart Slide</a></li>
+              <li><a href="/smart_program" style="color: #fff;">Smart Program</a></li>
+            </ul>
+          </div>
+        </div>
+        <div style="text-align: auto; margin-right: 40px; margin-left:0px;">
+          <div class="qlinks">
+            <ul>
+              <span class="bold">ABOUT US</span>
+              <li><a href="/contact" style="color: #fff;">Contact</a></li>
+              <li><a href="/jobs" style="color: #fff;">Careers</a></li>
+              <li><a href="/testimonials" style="color: #fff;">Testimonials</a></li>
+              <li><a href="/policy" style="color: #fff;">Policy for conferences</a></li>
+              <li><a href="/privacy" style="color: #fff;">Privacy</a></li>
+              <li><a href="/terms" style="color: #fff;">Terms of service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div style="text-align: auto; margin-right: 20px;">
+          <div class="qlinks">
+            <ul>
+              <span class="bold">CONFERENCES</span>
+              <li><a href="/installation" style="color: #fff;">Create conference</a></li>
+              <li><a href="/licenses" style="color: #fff;">Licenses and pricing</a></li>
+              <li><a href="/faq" style="color: #fff;">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div style="text-align: auto; margin-right: 100px;">
+          <div class="qlinks">
+            <ul class="qlinks" style="list-style-type: none; padding: 0;">
+              <li>
+                <span class="bold contact-us">CONTACT US</span>
+              </li>
+              <li style="display: inline-block; margin-right: 10px;">
+                <a title="Linked In" href="https://www.linkedin.com/company/easychair" target="_blank">
+                  <img title="Linked In" alt="Linked In" src="images.png" style="width: 30px; height: 30px;">
+                </a>
+              </li>
+              <li style="display: inline-block;">
+                <a title="Twitter" href="https://twitter.com/WeEasyChair" target="_blank">
+                  <img class="twitter-icon" alt="Twitter" title="Twitter" src="124021.png" style="width: 30px; height: 30px;">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container-fluid" style="background-color: #39516b; color:#fff; padding: 20px;">
+      <div class="stripe colors-copyright">
+        <div class="segment">
+          <div class="content-row">
+            <div class="to-center" style="text-align: center;">
+              <img class="chair-alignment" src="/images/chairEC.gif">Copyright © 2002-2024 EasyChair
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </div>
+</body>
+</html>

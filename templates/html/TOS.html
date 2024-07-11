@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact-us</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  <style>
+    .sidebar {
+        height: 100vh;
+        /*background-color: rgba(248, 249, 250, 0.7); */
+        width: 70px; /* Adjust width as needed */
+      }
+      /* Style for sidebar links */
+      .sidebar button {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #2441e3; /* Text color */
+        display: block;
+      }
+      /* Active link style */
+      .sidebar button.active {
+        background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+        color: #fff; /* White text color */
+      }
+      /* Adjustments for the right sidebar */
+      .right-sidebar {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 90px; /* Adjust width as needed */
+      }
+      /* Style for right sidebar links */
+      .right-sidebar a,
+      .right-sidebar button {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #2441e3; /* Text color */
+        display: block;
+      }
+      /* Active link style for right sidebar */
+      .right-sidebar a.active,
+      .right-sidebar button.active {
+        background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+        color: #fff; /* White text color */
+      }
+      body {
+        background-image: url('/templates/images/istockphoto-1358004763-612x612.jpg'); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 130vh; /* Set height to fill entire viewport */
+      }
+      /* Adjust the size of icons */
+      .dropdown-menu .dropdown-item {
+        color: #333; /* Text color */
+      }
+    
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-0 sidebar">
+        <button class="btn btn-link active"><i class="fas fa-home"></i> Home</button>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>About</span>
+          <i class="fas fa-info-circle" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="contactUs.html">Contact</a>
+          <a class="dropdown-item" href="careers.html">Careers</a>
+          <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+          <a class="dropdown-item" href="policy.html">Policy for conferences</a>
+          <a class="dropdown-item" href="privacy.html">Privacy</a>
+          <a class="dropdown-item" href="TOS.html">Terms of service</a>
+        </div>
+      </div>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>Services</span>
+          <i class="fas fa-angle-down fas fa-cogs" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="conference_create.html">Create Conference</a>
+          <a class="dropdown-item" href="License_info.html">License Info</a>
+          <a class="dropdown-item" href="learnmore.html">License Pricing</a>
+          <a class="dropdown-item" href="Faq.html">FAQ</a>
+        </div>
+      </div>
+      
+        <button class="btn btn-link"><i class="fas fa-address-book"></i> Contact</button>
+        <button class="btn btn-link justify-content-end"><i class="fas fa-cog"></i> Settings</button>
+
+      </div>
+    <div class="container mt-5">
+        <h1 class="mb-4">EasyChair Terms of Service</h1>
+        <p>Thank you for choosing EasyChair!</p>
+
+        <h2>1. TERMS AND CONDITIONS OF SERVICE</h2>
+
+        <h3>1.1 EasyChair Ltd ("we" or "us" or "EasyChair Ltd"), via its online web service EasyChair ("EasyChair" or "EasyChair Web Site") <a href="https://easychair.org">https://easychair.org</a> provides services that allow users</h3>
+
+        <ul>
+            <li>to manage document submission, reviewing, publishing, program generation, content management, registration, user management, email management and monitoring, and accounting for conferences, workshops, journals, books, special issues and any other events or publications, and</li>
+            <li>to publish papers, articles, preprints, slides, presentations, videos, teaching material, programs of events, calls for papers and volumes and collections thereof,</li>
+        </ul>
+
+        <p>(the "Service").</p>
+
+        <p>WE ASK THAT YOU READ THESE TERMS AND CONDITIONS OF SERVICE (THE "TERMS"), BECAUSE YOUR USE OF THE SERVICE CONSTITUTES YOUR ACCEPTANCE OF THESE TERMS WITHOUT MODIFICATION. IF YOU DO NOT AGREE TO THESE TERMS, DO NOT USE THE SERVICE.</p>
+
+        <h3>1.2 If you use the Service on behalf of a company, organisation, or other entity, then</h3>
+
+        <ul>
+            <li>"you" includes you and that entity, and</li>
+            <li>you represent and warrant that you are an authorised representative of the entity with the authority to bind the entity to these Terms, and that you agree to these Terms on the entity's behalf.</li>
+        </ul>
+
+        <h3>1.3 We reserve the right to update the Service at any time at our discretion with or without notice to you. Such updates are designed to improve, enhance and further develop the Service and may take the form of bug fixes, enhanced functions, new modules, or other forms. You agree to receive such updates and permit us to deliver these to you as part of your use of the Service.</h3>
+
+        <h3>1.4 Additional terms may apply to some of our services. For example, if you use our conference registration module, additional terms apply to your use of this module. All of these are referred to below as the "Additional Terms". We will tell you when Additional Terms apply. If there is any contradiction between what the Additional Terms say and what these Terms say, then the Additional Terms shall take precedence in relation to that element of the Service.</h3>
+
+        <h2>2. LICENCE</h2>
+
+        <h3>2.1 We grant you a non-transferable, non-exclusive, non-sub-licensable, royalty-free worldwide right and licence to use the Service. It does not include the right for you (or any third party) to copy, adapt, modify, resell or repurpose any EasyChair Ltd product, service, or data or the EasyChair Web Site. If you are unclear about whether your use is acceptable under these terms, please contact us. The contact information will be available on the contact page of the EasyChair Web Site.</h3>
+
+        <h3>2.2 Your use of the Service does not create a partnership, joint venture or agency relationship or similar relationship between us and you.</h3>
+
+        <h3>2.3 You are expressly prohibited and shall not permit any third party to reproduce, redistribute, duplicate, copy, adapt, decompile, disassemble, modify, sell, trade or resell the Service (including the EasyChair Web Site) for any purpose, unless you have been specifically permitted to do so in a separate agreement with EasyChair Ltd.</h3>
+
+        <h3>2.4 No competitors or future competitors of EasyChair Ltd are permitted access to the Service and EasyChair Ltd reserves the right to suspend or terminate any account created or used by any person employed by or acting on behalf of any such competitor.</h3>
+
+        <h3>2.5 You must not use the Service to advertise or promote any fictitious conference(s).</h3>
+
+        <h2>3. YOUR USE OF THE SERVICE</h2>
+
+        <h3>3.1 You represent that you are of legal age to form a binding contract and are not prevented from accessing or receiving the Service under any applicable jurisdiction.</h3>
+
+        <h3>3.2 You agree to only use the Service for lawful purposes and as permitted by these Terms.</h3>
+
+        <h3>3.3 You agree not to access, interfere with, damage or disrupt (or attempt to access, interfere with, damage or disrupt) any part of the Service, any equipment or network on which the EasyChair Web Site is stored or any software used in the provision of the EasyChair Web Site through any technology or means other than through the EasyChair Web Site. You specifically agree not to access (or attempt to access) any part of the Service through any automated means, including without limitation scripts, web crawlers, robots, spiders, offline readers, etc.</h3>
+
+        <h3>3.4 You must not use the Service</h3>
+
+        <ul>
+            <li>to harm, threaten, stalk or otherwise harass another person or organisation (including without limitation for the purpose of harming or attempting to harm minors in any way),</li>
+            <li>in any way that is unlawful or fraudulent, or has any unlawful or fraudulent purpose or effect, including without limitation</li>
+            <li>to impersonate any person or entity,</li>
+            <li>to falsely state or otherwise misrepresent your affiliation with a person or entity, or</li>
+            <li>to hide or attempt to hide your identity, including by creating several accounts under different names,</li>
+            <li>to attempt to compromise the Service integrity or security or decipher any transmissions to or from the servers running the Service,</li>
+            <li>in any way that violates any applicable local, national or international law or regulation,</li>
+            <li>to transmit, or procure the sending of, spam, chain letters, or other unsolicited advertising or promotional material or any other form of similar solicitation,</li>
+            <li>to send, knowingly receive, upload, download, use or re-use any material which does not comply with our content standards (set out in clause 5.10), or</li>
+            <li>to knowingly transmit any data, send or upload any material that contains viruses, Trojan horses, worms, time-bombs, keystroke loggers, spyware, adware or any other harmful programs or similar computer code designed to adversely affect the operation of any computer software or hardware.</li>
+        </ul>
+
+        <h3>3.5 You acknowledge and agree that EasyChair Ltd may set upper limits on the number of transmissions you may send or receive through the Service or on the amount of storage space used for the provision of any Service. Such upper limits may be set by EasyChair Ltd at any time, at our discretion.</h3>
+
+        <h2>4. REGISTRATION, ACCOUNT AND PASSWORD</h2>
+
+        <h3>4.1 In order to access the Service, you may be required to provide information about yourself, such as identification or contact details (the "Registration Data"), as part of the registration process for the Service, or as part of your continued use of the Service. You agree to</h3>
+
+        <ul>
+            <li>provide Registration Data that is true, accurate, current and complete, and</li>
+            <li>maintain and promptly update the Registration Data to keep it true, accurate, current and complete. If you provide any information that is untrue, inaccurate, not current or incomplete, or we have reasonable grounds to suspect that such information is untrue, inaccurate, not current or incomplete, EasyChair Ltd, in its sole discretion, has the right to suspend or terminate your account and refuse any and all current or future use of the Service.</li>
+        </ul>
+
+        <h3>4.2 You agree and understand that you are fully responsible for all activities that occur under any account you use to access the Service.</h3>
+
+        <h3>4.3 You must keep your account(s) and password(s) confidential and not authorise any third party to access or use the Service on your behalf. You understand that any third party that has access to your account can reset your password, disable your access to the Service, view any content accessible from your account, or post any content, including content that violates these Terms or other laws, regulations or rules. You remain fully liable to and will indemnify and hold harmless EasyChair Ltd against claims, actions, proceedings, losses, damages, expenses and costs (including without limitation court costs and reasonable legal fees) arising out of or in connection with any third party's use of your account and password or the Services on your behalf.</h3>
+
+        <h3>4.4 You agree to immediately notify us of any unauthorised use of your account or password, or any other breach of security. We cannot and will not be liable for any loss or damage arising from your failure to comply with this section.</h3>
+
+        <h2>5. CONTENT AND INTELLECTUAL PROPERTY RIGHTS</h2>
+
+        <h3>5.1 EasyChair Ltd (or its licensors) owns all legal right, title and interest in and to the Service (including the EasyChair Web Site) and all intellectual property rights in them, including any modifications, updates or improvements to them. All trade marks and logos used in the Service are owned by EasyChair Ltd or its licensors and you must not use any of them without EasyChair Ltd's prior written permission.</h3>
+
+        <h3>5.2 You retain any rights you may already have in any data or other content you submit, post or display on or through the Service ("User Content"). By submitting, posting or displaying User Content, you grant EasyChair Ltd and its partners a perpetual, irrevocable, worldwide, royalty-free, and non-exclusive licence to reproduce, adapt, modify, translate, publish, publicly perform, publicly display, distribute, create derivative works from, and otherwise use your User Content in connection with the operation of the Service. You also grant EasyChair Ltd the right to sub-licence these rights to others as necessary to provide the Service.</h3>
+
+        <h3>5.3 You agree to indemnify, defend and hold EasyChair Ltd and its directors, officers, employees, agents and affiliates harmless from and against any and all claims, actions, demands, losses, damages, costs and expenses (including without limitation court costs and reasonable legal fees) arising out of or in connection with your use of the Service, your User Content, your breach of these Terms or any Additional Terms, or your violation of any laws or regulations or the rights of any third party.</h3>
+
+        <h3>5.4 EasyChair Ltd does not pre-screen User Content and you agree that you are solely responsible for all of your User Content. You must not post any User Content that</h3>
+
+        <ul>
+            <li>is unlawful, offensive, abusive, indecent, defamatory, infringing, harassing, or misleading, or</li>
+            <li>infringes any third party's intellectual property rights, or</li>
+            <li>violates any applicable local, national or international law or regulation, or</li>
+            <li>contains viruses, Trojan horses, worms, time-bombs, keystroke loggers, spyware, adware or any other harmful programs or similar computer code designed to adversely affect the operation of any computer software or hardware.</li>
+        </ul>
+
+        <h3>5.5 We reserve the right, but have no obligation, to monitor, filter, modify or remove any User Content at our sole discretion.</h3>
+
+        <h3>5.6 You agree that you must evaluate and bear all risks associated with the use of any User Content, including any reliance on the accuracy, completeness or usefulness of such User Content.</h3>
+
+        <h3>5.7 EasyChair Ltd does not guarantee that User Content will be made available on the Service or through the Service. We have no obligation to store, maintain or provide you with a copy of any User Content that you or any other user provides, except to the extent required by applicable law.</h3>
+
+        <h3>5.8 You agree that you will not hold EasyChair Ltd responsible for any loss or damage to any User Content, and you agree to take sole responsibility for maintaining a backup copy of your User Content.</h3>
+
+        <h3>5.9 You acknowledge and agree that EasyChair Ltd may access, preserve and disclose your account information and User Content if required to do so by law or in the good faith belief that such access, preservation or disclosure is reasonably necessary to</h3>
+
+        <ul>
+            <li>comply with legal process,</li>
+            <li>enforce these Terms,</li>
+            <li>respond to claims that any User Content violates the rights of third parties,</li>
+            <li>respond to your requests for customer service, or</li>
+            <li>protect the rights, property or personal safety of EasyChair Ltd, its users and the public.</li>
+        </ul>
+
+        <h3>5.10 Content standards: User Content must</h3>
+
+        <ul>
+            <li>be accurate (where it states facts),</li>
+            <li>be genuinely held (where it states opinions),</li>
+            <li>comply with applicable law in the UK and in any country from which it is posted.</li>
+        </ul>
+
+        <h3>5.11 User Content must not</h3>
+
+        <ul>
+            <li>be defamatory of any person,</li>
+            <li>be obscene, offensive, hateful or inflammatory,</li>
+            <li>promote sexually explicit material, violence or discrimination based on race, sex, religion, nationality, disability, sexual orientation or age,</li>
+            <li>infringe any copyright, database right or trade mark of any other person,</li>
+            <li>be likely to deceive any person,</li>
+            <li>breach any legal duty owed to a third party, such as a contractual duty or a duty of confidence,</li>
+            <li>promote any illegal activity,</li>
+            <li>be in contempt of court,</li>
+            <li>be threatening, abuse or invade another's privacy, or cause annoyance, inconvenience or needless anxiety,</li>
+            <li>be likely to harass, upset, embarrass, alarm or annoy any other person,</li>
+            <li>impersonate any person, or misrepresent your identity or affiliation with any person,</li>
+            <li>give the impression that the User Content emanates from EasyChair Ltd, if this is not the case,</li>
+            <li>advocate, promote or assist any unlawful act such as (by way of example only) copyright infringement or computer misuse.</li>
+        </ul>
+        <h2>6. USE OF PERSONAL INFORMATION</h2>
+
+        <h3>6.1 The following definitions apply in this section 6:</h3>
+
+        <ul>
+            <li>"Agreed Purpose" means the performance by users of their obligations in respect of the Service and/or under these Terms, and the promotion of the products or services that form the subject of the Service and/or these Terms.</li>
+            <li>"data controller, data processor, personal data, processing and appropriate technical and organisational measures" have the meanings set out in the Data Protection Legislation in force at the time.</li>
+            <li>"Data Protection Legislation" means the UK Data Protection Legislation and (for so long as and to the extent that the law of the European Union has legal effect in the UK) the General Data Protection Regulation ((EU) 2016/679) and any other directly applicable European Union regulation relating to privacy.</li>
+            <li>"Permitted Recipients" means you, your employees and/or any third parties engaged to perform obligations in connection with the Service or conference to which the Content relates.</li>
+            <li>"Sensitive Personal Information" means:
+                <ul>
+                    <li>a) any data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership,</li>
+                    <li>b) genetic data, biometric data for the purpose of uniquely identifying a natural person,</li>
+                    <li>c) data concerning health or medical information (other than food allergies or medical contact information),</li>
+                    <li>d) data concerning a natural person's sex life or sexual orientation,</li>
+                    <li>e) national insurance, social security numbers, or similar ids or numbers used in various countries,</li>
+                    <li>f) passport numbers or other government issued ID numbers,</li>
+                    <li>g) date of birth,</li>
+                    <li>h) age and/or gender,</li>
+                    <li>i) financial account information (other than payment information processed securely via EasyChair Ltd),</li>
+                    <li>j) other data which can be reasonably recognised as being highly sensitive</li>
+                </ul>
+            </li>
+            <li>"UK Data Protection Legislation" means any data protection legislation from time to time in force in the UK including the Data Protection Act 1998 or 2018 or any successor legislation.</li>
+        </ul>
+
+        <h3>6.2 You acknowledge that EasyChair Ltd will not disclose any personal data to you in your use of the Service and that EasyChair Ltd is not a data controller in respect of any data that you provide or make available to other users of the EasyChair Web Site.</h3>
+
+        <h3>6.3 As part of the Service, you may have access to personal data provided or made available by other users. You understand and agree that you should handle such personal data in compliance with applicable obligations under the Data Protection Legislation and any other regulations applicable in relevant jurisdictions. EasyChair Ltd is not responsible for ensuring that users comply with Data Protection Legislation. You also acknowledge that, given the nature of the Service, any personal data that you provide or make available to other users is likely to be transferred outside of the European Economic Area.</h3>
+
+        <h3>6.4 Any material breach of the Data Protection Legislation or such other regulations by you shall be grounds for EasyChair Ltd to suspend or terminate your use of the Service with immediate effect.</h3>
+
+        <h3>6.5 You acknowledge that you may be a data processor and/or a data controller in respect of any personal data that you provide or make available to, or receive from, other users of the Service. You agree to:</h3>
+        <ul>
+            <li>a) process personal data accessed and/or provided to you through the EasyChair Web Site only for the Agreed Purposes,</li>
+            <li>b) not disclose or allow access to such personal data to anyone other than the Permitted Recipients, and</li>
+            <li>c) ensure that you have in place appropriate technical and organisational measures to protect against unauthorised or unlawful processing of personal data and against accidental loss or destruction of, or damage to, personal data.</li>
+        </ul>
+
+        <h3>6.6 You acknowledge and agree that you will not unnecessarily request Sensitive Personal Information from other users and inform EasyChair Ltd if you are going to request or collect such information.</h3>
+
+        <h3>6.7 You acknowledge and agree that EasyChair Ltd can monitor requests to provide Sensitive Personal Information and require you to remove such requests.</h3>
+
+        <h3>6.8 You acknowledge and agree that processing, storing and transmitting Sensitive Personal Information is unnecessary for use of the Service and that you shall be solely responsible for any such use, and therefore EasyChair Ltd shall not be liable for the same.</h3>
+
+        <h3>6.9 You shall indemnify EasyChair Ltd against all liabilities, costs, expenses, damages and losses (including but not limited to any direct, indirect or consequential losses, loss of profit, loss of reputation and all interest, penalties and legal costs (calculated on a full indemnity basis) and all other professional costs and expenses) suffered or incurred by EasyChair Ltd arising out of or in connection with the breach of the Data Protection Legislation by you, your employees or agents.</h3>
+        <h2>7. DISCLAIMER OF WARRANTIES</h2>
+
+        <h3>7.1 THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE". TO THE FULLEST EXTENT PERMITTED BY LAW, EASYCHAIR LTD DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR THAT USE OF THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE. EASYCHAIR LTD DOES NOT WARRANT OR MAKE ANY REPRESENTATION REGARDING THE USE OR THE RESULTS OF THE USE OF THE SERVICE IN TERMS OF ITS CORRECTNESS, ACCURACY, RELIABILITY OR OTHERWISE.</h3>
+
+        <h3>7.2 EASYCHAIR LTD DOES NOT WARRANT THAT THE SERVICE OR ANY PART THEREOF WILL BE UNINTERRUPTED OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT THE SERVICE OR THE SERVERS THAT MAKE IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. YOU AGREE THAT YOUR USE OF THE SERVICE IS AT YOUR OWN RISK.</h3>
+
+        <h2>8. LIMITATION OF LIABILITY</h2>
+
+        <h3>8.1 TO THE FULLEST EXTENT PERMITTED BY LAW, EASYCHAIR LTD SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, OR FOR LOSS OF PROFITS, LOSS OF DATA, OR OTHER INTANGIBLE LOSSES, RESULTING FROM</h3>
+
+        <ul>
+            <li>THE USE OR THE INABILITY TO USE THE SERVICE;</li>
+            <li>THE COST OF PROCUREMENT OF SUBSTITUTE GOODS AND SERVICES;</li>
+            <li>UNAUTHORISED ACCESS TO OR ALTERATION OF YOUR TRANSMISSIONS OR DATA;</li>
+            <li>STATEMENTS OR CONDUCT OF ANY THIRD PARTY ON THE SERVICE; OR</li>
+            <li>ANY OTHER MATTER RELATING TO THE SERVICE.</li>
+        </ul>
+
+        <h3>8.2 TO THE EXTENT PERMITTED BY LAW, THE TOTAL LIABILITY OF EASYCHAIR LTD TO YOU FOR ANY DAMAGES ARISING OUT OF OR IN CONNECTION WITH THESE TERMS, THE SERVICE OR ANY ADDITIONAL TERMS, WHETHER BASED ON CONTRACT, TORT (INCLUDING NEGLIGENCE) OR OTHERWISE, SHALL NOT EXCEED THE GREATER OF (A) £50.00 OR (B) THE TOTAL AMOUNT PAID BY YOU TO EASYCHAIR LTD FOR THE SERVICE IN THE 12 MONTHS PRECEDING THE DATE OF THE CLAIM.</h3>
+
+        <h3>8.3 SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES. ACCORDINGLY, SOME OF THE ABOVE LIMITATIONS IN SECTIONS 7 AND 8 MAY NOT APPLY TO YOU.</h3>
+
+        <h2>9. GENERAL TERMS</h2>
+
+        <h3>9.1 These Terms and any Additional Terms constitute the entire agreement between you and EasyChair Ltd with respect to the subject matter hereof and supersede all prior or contemporaneous communications and proposals, whether oral or written, between you and EasyChair Ltd with respect to the subject matter hereof.</h3>
+
+        <h3>9.2 You may not assign or transfer any of your rights or obligations under these Terms or any Additional Terms without the prior written consent of EasyChair Ltd.</h3>
+
+        <h3>9.3 EasyChair Ltd may assign or transfer any of its rights or obligations under these Terms or any Additional Terms to any third party at any time without notice to you.</h3>
+
+        <h3>9.4 Any failure by EasyChair Ltd to exercise or enforce any right or provision of these Terms or any Additional Terms shall not constitute a waiver of such right or provision. If any provision of these Terms or any Additional Terms is found by a court of competent jurisdiction to be invalid, the parties nevertheless agree that the court should endeavour to give effect to the parties' intentions as reflected in the provision, and the other provisions of these Terms or any Additional Terms remain in full force and effect.</h3>
+
+        <h3>9.5 These Terms and any Additional Terms shall be governed by and construed in accordance with the laws of England and Wales, without regard to its conflict of law principles. You agree to submit to the exclusive jurisdiction of the courts located within England and Wales to resolve any legal matter arising from these Terms or any Additional Terms.</h3>
+
+        <h3>9.6 The section titles in these Terms are for convenience only and have no legal or contractual effect.</h3>
+
+        <h3>9.7 If you have any questions about these Terms or any Additional Terms, please contact us at the email address provided on the contact page of the EasyChair Web Site.</h3>
+
+    </div>
+      
+      <div class="right-sidebar">
+        <div class="dropdown">
+          <button class="btn btn-link dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <i class="fas fa-user"></i>
+              Profile
+            </div>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="/TESTABCDE.HTML"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a class="dropdown-item" href="/profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid" style="background-color: #4e6a89; color:#fff; padding: 20px;"> <!-- Added padding to the container -->
+    <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: left; margin-left: 100px; margin-right:20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">SERVICES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Conference management</a></li>
+                    <li><a href="registration_info.html" style="color: #fff;">Registration</a></li>
+                    <li><a href="publishing_info.html" style="color: #fff;">Publishing</a></li>
+                    <li><a href="smartcfp.html" style="color: #fff;">Smart CFP</a></li>
+                    <li><a href="/smart_slide" style="color: #fff;">Smart Slide</a></li>
+                    <li><a href="/smart_program" style="color: #fff;">Smart Program</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 40px; margin-left:0px;"> <!-- Adjusted margin-left -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">ABOUT US</span>
+                    <li><a href="overview.html" style="color: #fff;">Overview</a></li>
+                    <li><a href="contactUs.html" style="color: #fff;">Contact</a></li>
+                    <li><a href="careers.html" style="color: #fff;">Careers</a></li>
+                    <li><a href="testimonials.html" style="color: #fff;">Testimonials</a></li>
+                    <li><a href="policy.html" style="color: #fff;">Policy for conferences</a></li>
+                    <li><a href="privacy.html" style="color: #fff;">Privacy</a></li>
+                    <li><a href="/terms" style="color: #fff;">Terms of service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">CONFERENCES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Create conference</a></li>
+                    <li><a href="License_info.html" style="color: #fff;">Licenses and pricing</a></li>
+                    <li><a href="/faq" style="color: #fff;">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 100px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul class="qlinks" style="list-style-type: none; padding: 0;">
+                    <li>
+                        <span class="bold contact-us">CONTACT US</span>
+                    </li>
+                    <li style="display: inline-block; margin-right: 10px;"> <!-- Adjusted margin-right -->
+                        <a title="Linked In" href="https://www.linkedin.com/company/easychair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img title="Linked In" alt="Linked In" src="/templates/images/images.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                    <li style="display: inline-block;"> <!-- Adjusted margin-right -->
+                        <a title="Twitter" href="https://twitter.com/WeEasyChair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img class="twitter-icon" alt="Twitter" title="Twitter" src="/templates/images/124021.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #39516b; color:#fff; padding: 20px;"> 
+    <div class="stripe colors-copyright">
+        <div class="segment">
+            <div class="content-row">
+                <div class="to-center" style="text-align: center;"> <!-- Added text-align: center; -->
+                    Copyright © 2002-2024 EasyChair
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

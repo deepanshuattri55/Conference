@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .bg-gif {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            background-size: cover;
+            opacity: 0.7; /* Adjust the opacity to make form readable */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding-bottom: 50px; /* Adjusted padding for better spacing */
+        }
+
+        .profile-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            border: 1px solid #e3e3e3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .profile-form .form-group label {
+            font-weight: bold;
+        }
+        .profile-form .form-group input[type="file"] {
+            display: none;
+        }
+        .profile-form .form-group .custom-file-label {
+            cursor: pointer;
+        }
+        .profile-form .delete-account {
+            color: red;
+            cursor: pointer;
+        }
+        .profile-pic-preview {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 10px auto;
+            display: block;
+            object-fit: cover;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .header {
+            padding-top: 50px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<img src="/html/images/crump-meeting.gif" class="bg-gif" alt="Background GIF">
+
+<div class="container content">
+    <div class="header">
+        <button class="btn btn-secondary back-button" onclick="goBack()"><-Back to Dashboard</button>
+        <h1>Profile Settings</h1>
+        <p>Manage your account and password settings</p>
+    </div>
+    <form class="profile-form" id="profileForm">
+        <ul class="nav nav-tabs" id="profileTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="account-tab" data-toggle="tab" href="#account" role="tab" aria-controls="account" aria-selected="true">Account</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="password-tab" data-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="false">Password</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="profileTabContent">
+            <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+                <div class="form-group">
+                    <label for="firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email" value="igoryakova@code-gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="affiliation">Affiliation</label>
+                    <input type="text" class="form-control" id="affiliation" placeholder="Affiliation">
+                </div>
+                <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="url" class="form-control" id="website" placeholder="https://">
+                </div>
+                <div class="form-group text-center">
+                    <img id="profilePicPreview" class="profile-pic-preview" src="https://via.placeholder.com/150" alt="Profile Picture">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="profilePicture">
+                        <label class="custom-file-label" for="profilePicture">Click to upload or drag and drop</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea class="form-control" id="bio" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="twitter">Twitter</label>
+                    <input type="text" class="form-control" id="twitter" placeholder="Twitter">
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="text" class="form-control" id="linkedin" placeholder="LinkedIn">
+                </div>
+            </div>
+            <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+                <div class="form-group">
+                    <label for="currentPassword">Current password</label>
+                    <input type="password" class="form-control" id="currentPassword" placeholder="Current password">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="newPassword">New password</label>
+                        <input type="password" class="form-control" id="newPassword" placeholder="New password">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="confirmNewPassword">Confirm new password</label>
+                        <input type="password" class="form-control" id="confirmNewPassword" placeholder="Confirm new password">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <button type="button" class="btn btn-primary ml-2" onclick="saveProfile()">Save</button>
+            <button type="button" class="btn btn-danger delete-account" style="color: aliceblue;">Delete Account</button>
+            
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $('#profilePicture').on('change', function() {
+        var fileName = $(this).val().split('\\').pop();
+        $(this).next('.custom-file-label').html(fileName);
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#profilePicPreview').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(this.files[0]);
+    });
+
+    function goBack() {
+        window.location.href = "/TESTABCDE.HTML"; // Adjust the URL to match your dashboard route
+    }
+
+    function saveProfile() {
+        var formData = {
+            firstName: $('#firstName').val(),
+            lastName: $('#lastName').val(),
+            email: $('#email').val(),
+            affiliation: $('#affiliation').val(),
+            website: $('#website').val(),
+            bio: $('#bio').val(),
+            twitter: $('#twitter').val(),
+            linkedin: $('#linkedin').val(),
+            currentPassword: $('#currentPassword').val(),
+            newPassword: $('#newPassword').val(),
+            confirmNewPassword: $('#confirmNewPassword').val()
+        };
+        
+        console.log("Form Data Saved: ", formData);
+
+        // Here you would typically send this data to your server using AJAX or form submission
+        // $.ajax({
+        //     url: '/save-profile',
+        //     type: 'POST',
+        //     data: formData,
+        //     success: function(response) {
+        //         console.log('Profile saved successfully');
+        //     },
+        //     error: function(error) {
+        //         console.error('Error saving profile', error);
+        //     }
+        // });
+    }
+</script>
+
+</body>
+</html>

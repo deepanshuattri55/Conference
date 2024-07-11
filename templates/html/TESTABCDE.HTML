@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourwaves Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+        }
+        .bg-light {
+            background-color: #f8f9fa29 !important;
+        }
+        .container-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            color: #555;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .search-input {
+            width: 300px;
+        }
+        .no-events {
+            margin-top: 50px;
+        }
+        .no-events img {
+            width: 150px;
+        }
+        .no-events-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #999;
+        }
+        .nav-tabs .nav-link.active {
+            border-color: #dee2e600 #dee2e6 #fff;
+        }
+        .event-table img {
+            width: 50px;
+            height: auto;
+        }
+        .event-table .status {
+            background-color: #f1f1f1;
+            border-radius: 20px;
+            padding: 0.2em 0.6em;
+        }
+        .role-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .role-dropdown .dropdown-menu {
+            top: 100%;
+            left: 0;
+            margin-top: 0.25rem;
+        }
+        .role-dropdown .dropdown-toggle::after {
+            display: none;
+        }
+        .role-dropdown .dropdown-menu {
+            min-width: auto;
+            width: 150px;
+        }
+        .role-dropdown .dropdown-item.active {
+            background-color: #f8f9fa;
+            color: #007bff;
+        }
+        .role-dropdown .dropdown-item.active::after {
+            content: '✔';
+            float: right;
+            color: #007bff;
+        }
+        .role-dropdown .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 150px;
+        }
+        .profile-dropdown .dropdown-menu {
+            right: 0;
+            left: auto;
+            width: 250px;
+        }
+        .profile-dropdown .dropdown-item-text {
+            text-align: center;
+        }
+        .profile-dropdown .dropdown-item-text i {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        .profile-dropdown .dropdown-item {
+            display: flex;
+            align-items: center;
+        }
+        .profile-dropdown .dropdown-item i {
+            margin-right: 10px;
+        }
+        .profile-dropdown .dropdown-item i.fa-sign-out-alt {
+            color: red;
+        }
+        body {
+            background-image: url("/html/images/Light-blue-tech-background-vector-04.jpg"); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%; /* Set height to fill entire viewport */
+            filter: blur(-20px); 
+            z-index: -1;
+          }
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light" id="navbar">
+        <a class="navbar-brand" href="/html/index1.html">
+            <img src="/html/images/logoEC.png" width="100" height="30" class="d-inline-block align-top" alt="">
+            
+        </a>
+        <div class="role-dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="roleDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="role-title">Organizer</span>
+                <i class="fas fa-caret-down ml-2"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="roleDropdownMenuButton">
+                <a class="dropdown-item active" href="TESTABCDE.HTML">Organizer</a>
+                <a class="dropdown-item " href="participant.html">Participant</a>
+                <a class="dropdown-item" href="reviewer.html">Reviewer</a>
+            </div>
+        </div>
+        <a href="/html/Authors_new_submission.html" class="btn btn-primary ml-auto">
+            <i class="fas fa-plus"></i> New Event
+        </a>        
+        <div class="dropdown ml-3">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownLanguageButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                EN
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownLanguageButton">
+                <a class="dropdown-item" href="#">EN</a>
+                <a class="dropdown-item" href="#">FR</a>
+            </div>
+        </div>
+        <div class="profile-dropdown dropdown ml-3">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownProfileButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user-circle fa-2x"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownProfileButton">
+                <div class="dropdown-item-text">
+                    <i class="fas fa-user-circle fa-3x"></i>
+                    <div id="userName">null null</div>
+                    <div id="userEmail" class="text-muted">igoryakova@code-gmail.com</div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="TESTABCDE.HTML"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <a class="dropdown-item" href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                <a class="dropdown-item" href="/html/index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            </div>
+        </div>
+    </nav>
+
+<div class="container mt-4">
+    <h2>Organizer Dashboard</h2>
+    
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="drafts-tab" data-toggle="tab" href="#drafts" role="tab" aria-controls="drafts" aria-selected="true">Drafts <span class="badge badge-primary">1</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="active-tab" data-toggle="tab" href="#active" role="tab" aria-controls="active" aria-selected="false">Active & Upcoming <span class="badge badge-secondary">0</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="past-tab" data-toggle="tab" href="#past" role="tab" aria-controls="past" aria-selected="false">Past <span class="badge badge-secondary">0</span></a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="drafts" role="tabpanel" aria-labelledby="drafts-tab">
+            <div class="mt-3">
+                <input class="form-control mb-3" type="search" placeholder="Search" aria-label="Search">
+                <table class="table event-table">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Format</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="https://via.placeholder.com/50" alt="Event Image">
+                                <span>Exploring the Depths of Molecular Biology: Advancements and Applications</span>
+                            </td>
+                            <td>22 Nov. 2024</td>
+                            <td>In person</td>
+                            <td>-</td>
+                            <td><span class="status">Draft</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="active" role="tabpanel" aria-labelledby="active-tab">No active events</div>
+        <div class="tab-pane fade" id="past" role="tabpanel" aria-labelledby="past-tab">No past events</div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

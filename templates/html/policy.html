@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policy</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  <style>
+      .sidebar {
+        height: 100vh;
+        /*background-color: rgba(248, 249, 250, 0.7); */
+        width: 70px; /* Adjust width as needed */
+      }
+      /* Style for sidebar links */
+      .sidebar button {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #2441e3; /* Text color */
+        display: block;
+      }
+      /* Active link style */
+      .sidebar button.active {
+        background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+        color: #fff; /* White text color */
+      }
+      /* Adjustments for the right sidebar */
+      .right-sidebar {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 90px; /* Adjust width as needed */
+      }
+      /* Style for right sidebar links */
+      .right-sidebar a,
+      .right-sidebar button {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #2441e3; /* Text color */
+        display: block;
+      }
+      /* Active link style for right sidebar */
+      .right-sidebar a.active,
+      .right-sidebar button.active {
+        background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+        color: #fff; /* White text color */
+      }
+      body {
+        background-image: url('/templates/images/istockphoto-1358004763-612x612.jpg'); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%; /* Set height to fill entire viewport */
+      }
+      /* Adjust the size of icons */
+      .dropdown-menu .dropdown-item {
+        color: #333; /* Text color */
+      }
+      
+      
+    .careers-header {
+        font-size: 34px;
+        font-weight: bold;
+        color: #0056b3;
+    }
+    .careers-container {
+        margin-top: 40px;
+    }
+    .careers-list li {
+        margin-bottom: 10px;
+    }
+    .header-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-0 sidebar">
+        <button class="btn btn-link active"><i class="fas fa-home"></i> Home</button>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>About</span>
+          <i class="fas fa-info-circle" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="contactUs.html">Contact</a>
+          <a class="dropdown-item" href="careers.html">Careers</a>
+          <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+          <a class="dropdown-item" href="policy.html">Policy for conferences</a>
+          <a class="dropdown-item" href="privacy.html">Privacy</a>
+          <a class="dropdown-item" href="TOS.html">Terms of service</a>
+        </div>
+      </div>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>Services</span>
+          <i class="fas fa-angle-down fas fa-cogs" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="conference_create.html">Create Conference</a>
+          <a class="dropdown-item" href="License_info.html">License Info</a>
+          <a class="dropdown-item" href="learnmore.html">License Pricing</a>
+          <a class="dropdown-item" href="Faq.html">FAQ</a>
+        </div>
+      </div>
+      
+        <button class="btn btn-link"><i class="fas fa-address-book"></i> Contact</button>
+        <button class="btn btn-link justify-content-end"><i class="fas fa-cog"></i> Settings</button>
+
+      </div>
+      
+      <div class="container policy-container" style="padding-top: 30px; padding-bottom:30px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="header-container">
+                    
+                    <h1><div class="policy-header">Our Policy on Conferences Using EasyChair</div></h1>  
+                </div><br>
+                <p>If you have any questions or comments regarding our policies, please feel free to contact us.</p>
+                <h4>Why Have a Policy?</h4>
+                <p>The simple answer is: "because we care about our reputation." Initially, EasyChair was utilized by a handful of conferences and workshops in computer science organized by leading scientists. Today, it serves thousands of conferences organized by scientists, organizations, associations, professional conference organizers, and individuals. If any of these conferences fail to adhere to generally accepted ethical standards, it could potentially harm EasyChair's reputation.</p>
+                <p>Below is our policy or code of conduct. While the parallel submission requirement is specific to EasyChair, other policies can be considered as general fair policy guidelines for conference organizers.</p>
+                <p>If some of these requirements do not apply to your conference (e.g., if your conference has no website or you use EasyChair for teaching students), you may disregard them.</p>
+                <h4>Strictly No Spam</h4>
+                <p>EasyChair enforces a strict no-spam policy. We do not spam our users, nor do we sell or distribute their email addresses. We expect our users to follow the same principles. If your conference uses mailing lists for sending conference-related announcements, please adhere to the following guidelines:</p>
+                <ul>
+                    <li>The mailing list should be compiled to target only the intended audience.</li>
+                    <li>There should be a simple one-click unsubscribe link. Upon clicking, the unsubscribe email address should be displayed on your web page and removed from the list.</li>
+                    <li>If you manage multiple conferences, it is preferable to use a single mailing list. If you must use several lists (for example, for conferences in different areas), you must not include addresses that have unsubscribed from one list into another.</li>
+                </ul>
+                <p>Your mailing list organization can vary, as long as email recipients do not complain. If you host your conference on EasyChair, you are prohibited from sending emails about anything unrelated to this conference. This includes promoting future editions of your conference. We assist you in hosting the conference but are not a mailing list service, and authors and reviewers often consider such promotional emails as spam.</p>
+                <h4>Verifiable Information Principle</h4>
+                <p>All information included on the web pages and in any announcements of your conference must be authentic and verifiable. This includes:</p>
+                <ul>
+                    <li>All individuals mentioned on the pages and in announcements. For example, if your web page lists the conference scientific committee, it should either include links to the web pages of committee members or you should be able to provide, upon request, confirmation that a particular committee member has agreed to be part of the committee.</li>
+                    <li>All organizations, such as sponsors, mentioned on your web pages or in your announcements. Your association with these organizations should be verifiable upon request.</li>
+                    <li>All third-party logos used on your web pages or in your announcements. You should have permission to use these logos and be able to justify that you have such permission.</li>
+                </ul>
+                <h4>Other Requirements</h4>
+                <ul>
+                    <li>If a conference, or part of a conference, uses EasyChair for submissions, there should be no parallel submission process. Submissions must only be done through EasyChair and not by email or another submission system.</li>
+                    <li>The conference web pages must clearly state who is organizing the conference. The organizer can be a university, another organization, a company, an academic association, or an individual.</li>
+                    <li>The conference web pages must include easily accessible contact information:
+                        <ul>
+                            <li>There must be an email address, preferably belonging to the domain of a university, a recognized academic institution, or a major company or organization.</li>
+                            <li>If the email address does not belong to one of these domains, there must be a contact phone number.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+
+      
+      
+      <!-- Right Sidebar -->
+      <div class="right-sidebar">
+        <div class="dropdown">
+          <button class="btn btn-link dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <i class="fas fa-user"></i>
+              Profile
+            </div>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="/TESTABCDE.HTML"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a class="dropdown-item" href="/profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" style="background-color: #4e6a89; color:#fff; padding: 20px;"> <!-- Added padding to the container -->
+    <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: left; margin-left: 100px; margin-right:20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">SERVICES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Conference management</a></li>
+                    <li><a href="registration_info.html" style="color: #fff;">Registration</a></li>
+                    <li><a href="publishing_info.html" style="color: #fff;">Publishing</a></li>
+                    <li><a href="smartcfp.html" style="color: #fff;">Smart CFP</a></li>
+                    <li><a href="/smart_slide" style="color: #fff;">Smart Slide</a></li>
+                    <li><a href="/smart_program" style="color: #fff;">Smart Program</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 40px; margin-left:0px;"> <!-- Adjusted margin-left -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">ABOUT US</span>
+                    <li><a href="overview.html" style="color: #fff;">Overview</a></li>
+                    <li><a href="contactUs.html" style="color: #fff;">Contact</a></li>
+                    <li><a href="careers.html" style="color: #fff;">Careers</a></li>
+                    <li><a href="testimonials.html" style="color: #fff;">Testimonials</a></li>
+                    <li><a href="policy.html" style="color: #fff;">Policy for conferences</a></li>
+                    <li><a href="privacy.html" style="color: #fff;">Privacy</a></li>
+                    <li><a href="/terms" style="color: #fff;">Terms of service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">CONFERENCES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Create conference</a></li>
+                    <li><a href="License_info.html" style="color: #fff;">Licenses and pricing</a></li>
+                    <li><a href="/faq" style="color: #fff;">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 100px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul class="qlinks" style="list-style-type: none; padding: 0;">
+                    <li>
+                        <span class="bold contact-us">CONTACT US</span>
+                    </li>
+                    <li style="display: inline-block; margin-right: 10px;"> <!-- Adjusted margin-right -->
+                        <a title="Linked In" href="https://www.linkedin.com/company/easychair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img title="Linked In" alt="Linked In" src="/templates/images/images.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                    <li style="display: inline-block;"> <!-- Adjusted margin-right -->
+                        <a title="Twitter" href="https://twitter.com/WeEasyChair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img class="twitter-icon" alt="Twitter" title="Twitter" src="/templates/images/124021.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #39516b; color:#fff; padding: 20px;"> 
+    <div class="stripe colors-copyright">
+        <div class="segment">
+            <div class="content-row">
+                <div class="to-center" style="text-align: center;"> <!-- Added text-align: center; -->
+                    Copyright © 2002-2024 EasyChair
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  <style>
+    .sidebar {
+        height: 100vh;
+        /*background-color: rgba(248, 249, 250, 0.7); */
+        width: 70px; /* Adjust width as needed */
+      }
+      /* Style for sidebar links */
+      .sidebar button {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #2441e3; /* Text color */
+        display: block;
+      }
+      /* Active link style */
+      .sidebar button.active {
+        background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+        color: #fff; /* White text color */
+      }
+      /* Adjustments for the right sidebar */
+      .right-sidebar {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 90px; /* Adjust width as needed */
+      }
+      /* Style for right sidebar links */
+      .right-sidebar a,
+      .right-sidebar button {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #2441e3; /* Text color */
+        display: block;
+      }
+      /* Active link style for right sidebar */
+      .right-sidebar a.active,
+      .right-sidebar button.active {
+        background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+        color: #fff; /* White text color */
+      }
+      body {
+        background-image: url('/templates/images/istockphoto-1358004763-612x612.jpg'); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%; /* Set height to fill entire viewport */
+      }
+      /* Adjust the size of icons */
+      .dropdown-menu .dropdown-item {
+        color: #333; /* Text color */
+      }
+      
+      
+    .careers-header {
+        font-size: 34px;
+        font-weight: bold;
+        color: #0056b3;
+    }
+    .careers-container {
+        margin-top: 40px;
+    }
+    .careers-list li {
+        margin-bottom: 10px;
+    }
+    .header-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-0 sidebar">
+        <button class="btn btn-link active"><i class="fas fa-home"></i> Home</button>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>About</span>
+          <i class="fas fa-info-circle" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="contactUs.html">Contact</a>
+          <a class="dropdown-item" href="careers.html">Careers</a>
+          <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+          <a class="dropdown-item" href="policy.html">Policy for conferences</a>
+          <a class="dropdown-item" href="privacy.html">Privacy</a>
+          <a class="dropdown-item" href="TOS.html">Terms of service</a>
+        </div>
+      </div>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>Services</span>
+          <i class="fas fa-angle-down fas fa-cogs" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="conference_create.html">Create Conference</a>
+          <a class="dropdown-item" href="License_info.html">License Info</a>
+          <a class="dropdown-item" href="learnmore.html">License Pricing</a>
+          <a class="dropdown-item" href="Faq.html">FAQ</a>
+        </div>
+      </div>
+      
+        <button class="btn btn-link"><i class="fas fa-address-book"></i> Contact</button>
+        <button class="btn btn-link justify-content-end"><i class="fas fa-cog"></i> Settings</button>
+
+      </div>
+      
+    
+      <div class="container careers-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="header-container">
+                    
+                    <h1><div class="careers-header">Testimonials</div></h1>  
+                </div><br>
+                <p>By 2010, I had served as program chair 20 times, participated on over 100 international conference committees, and contributed to the editorial boards of seven journals. I thought I knew everything about managing conferences and reviewing. I was wrong. Modern EasyChair incorporates vast knowledge derived from feedback across thousands of conferences and diverse communities. It is designed with its users in mind because its main designer is also one of its primary users.</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Andrei Voronkov</a> (CEO of EasyChair, Professor at the University of Manchester and TU Wien)</strong></p>
+                
+                <p>The system is fantastic—intuitive and powerful.</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Kurt Mehlhorn</a> (Vice President, Max-Planck Society)</strong></p>
+                
+                <p>Thanks, as always, for the excellent system. What would we do without it?!</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Manuel Hermenegildo</a> (Director, IMDEA Software Institute)</strong></p>
+                
+                <p>After using EasyChair, the thought of managing a workshop or conference any other way is dreadful.</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Úlfar Erlingsson</a> (Microsoft Research)</strong></p>
+                
+                <p>EasyChair is crucial to the success of FLoC. Managing so many papers, programs, and proceedings would be impossible without it.</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Moshe Vardi</a> (Professor, Rice University and Editor-in-Chief, Communications of the ACM)</strong></p>
+                
+                <p>Hi Andrei,</p>
+                <p>I have been using your EasyChair system with great pleasure, first for BPM05 and now for EEE/CEC06... and I love it.</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Fabio Casati</a> (Professor, University of Trento)</strong></p>
+                
+                <p>EasyChair is a fantastic system. Without it, I wouldn’t accept the invitation to be a program committee chair.</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Tetsuo Ida</a> (Professor, Tsukuba University)</strong></p>
+                
+                <p>MKM has been using EasyChair for several years, and we all agree it is the best thing since sliced bread.</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Robert Miner</a> (Vice President, Design Science Inc.)</strong></p>
+                
+                <p>I just submitted a paper to ICALP and was very impressed by EasyChair. It far surpasses many commercial packages I’ve used in the past...</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Ion Mandoiu</a> (Professor, University of Connecticut)</strong></p>
+                
+                <p>Terrific from start to finish.</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Pascal van Hentenryck</a> (Research group leader, NICTA)</strong></p>
+                
+                <p>Dear Andrei,</p>
+                <p>We are organizing MFPS in Birmingham next year and are currently evaluating different software packages to support the work of the PC. I remember the one used for LICS last year (based in Manchester) was excellent—the best I’ve ever dealt with. I haven't been able to identify the name or vendor of that package. Could you provide a pointer?</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Achim Jung</a></strong></p>
+                
+                <p>I'm very impressed by the paper assignment algorithm of your system—it’s definitely the best result I've ever received. Both Thomas and I would like to use it for ICDT.</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Leonid Libkin</a> (Professor, University of Edinburgh)</strong></p>
+                
+                <p>Dear Andrei,</p>
+                <p>I greatly appreciated PC-expert; it works better than any other systems I’ve used as a PC member. Javier Esparza, who has more experience, shares this opinion. I'll therefore propose PC-expert for future occasions.</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Philippe Darondeau</a></strong></p>
+                
+                <p>Dear Prof. Voronkov,</p>
+                <p>Frank Pfenning told me about your conference management system, which he considers the best he's used. Could you provide a link with more information on EasyChair?</p>
+                <p><strong>- <a href="#" style="text-decoration: underline;">Eugenio Moggi</a></strong></p>
+            </div>
+        </div>
+    </div>
+    
+
+      
+      
+      <!-- Right Sidebar -->
+      <div class="right-sidebar">
+        <div class="dropdown">
+          <button class="btn btn-link dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <i class="fas fa-user"></i>
+              Profile
+            </div>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="/TESTABCDE.HTML"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a class="dropdown-item" href="/profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" style="background-color: #4e6a89; color:#fff; padding: 20px;"> <!-- Added padding to the container -->
+    <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: left; margin-left: 100px; margin-right:20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">SERVICES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Conference management</a></li>
+                    <li><a href="registration_info.html" style="color: #fff;">Registration</a></li>
+                    <li><a href="publishing_info.html" style="color: #fff;">Publishing</a></li>
+                    <li><a href="smartcfp.html" style="color: #fff;">Smart CFP</a></li>
+                    <li><a href="/smart_slide" style="color: #fff;">Smart Slide</a></li>
+                    <li><a href="/smart_program" style="color: #fff;">Smart Program</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 40px; margin-left:0px;"> <!-- Adjusted margin-left -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">ABOUT US</span>
+                    <li><a href="overview.html" style="color: #fff;">Overview</a></li>
+                    <li><a href="contactUs.html" style="color: #fff;">Contact</a></li>
+                    <li><a href="careers.html" style="color: #fff;">Careers</a></li>
+                    <li><a href="testimonials.html" style="color: #fff;">Testimonials</a></li>
+                    <li><a href="policy.html" style="color: #fff;">Policy for conferences</a></li>
+                    <li><a href="privacy.html" style="color: #fff;">Privacy</a></li>
+                    <li><a href="/terms" style="color: #fff;">Terms of service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">CONFERENCES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Create conference</a></li>
+                    <li><a href="License_info.html" style="color: #fff;">Licenses and pricing</a></li>
+                    <li><a href="/faq" style="color: #fff;">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 100px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul class="qlinks" style="list-style-type: none; padding: 0;">
+                    <li>
+                        <span class="bold contact-us">CONTACT US</span>
+                    </li>
+                    <li style="display: inline-block; margin-right: 10px;"> <!-- Adjusted margin-right -->
+                        <a title="Linked In" href="https://www.linkedin.com/company/easychair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img title="Linked In" alt="Linked In" src="/templates/images/images.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                    <li style="display: inline-block;"> <!-- Adjusted margin-right -->
+                        <a title="Twitter" href="https://twitter.com/WeEasyChair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img class="twitter-icon" alt="Twitter" title="Twitter" src="/templates/images/124021.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #39516b; color:#fff; padding: 20px;"> 
+    <div class="stripe colors-copyright">
+        <div class="segment">
+            <div class="content-row">
+                <div class="to-center" style="text-align: center;"> <!-- Added text-align: center; -->
+                  Copyright © 2002-2024 EasyChair
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

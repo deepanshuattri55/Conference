@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Plans and License Prices</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            height: 100vh;
+            /*background-color: rgba(248, 249, 250, 0.7); */
+            width: 70px; /* Adjust width as needed */
+          }
+          /* Style for sidebar links */
+          .sidebar button {
+            padding: 6px 12px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff; /* Text color */
+            display: block;
+          }
+          /* Active link style */
+          .sidebar button.active {
+            background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+            color: #fff; /* White text color */
+          }
+          /* Adjustments for the right sidebar */
+          .right-sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 90px; /* Adjust width as needed */
+          }
+          /* Style for right sidebar links */
+          .right-sidebar a,
+          .right-sidebar button {
+            padding: 6px 12px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff; /* Text color */
+            display: block;
+          }
+          /* Active link style for right sidebar */
+          .right-sidebar a.active,
+          .right-sidebar button.active {
+            background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+            color: #fff; /* White text color */
+          }
+          /* Fill background image to entire screen */
+          body {
+            background-image: url('/templates/images/images11111.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%; /* Set height to fill entire viewport */
+          }
+          /* Adjust the size of icons */
+          .dropdown-menu .dropdown-item {
+            color: #333; /* Text color */
+          }
+        .highlight-header {
+            background-color: #f8f9fa;
+        }
+        .highlight-pink {
+            background-color: #fce4ec;
+        }
+        .highlight-yellow {
+            background-color: #fff9c4;
+        }
+        .highlight-light-pink {
+            background-color: #fce4ec;
+        }
+        .highlight-green {
+            background-color: #dcedc8;
+        }
+        .highlight-blue {
+            background-color: #e3f2fd;
+        }
+        .highlight-light-blue {
+            background-color: #bbdefb;
+        }
+        .center-text {
+            text-align: center;
+            font-weight: bold;
+        }
+        .header-title {
+            color: #ffffff;
+            font-size: 2.0rem;
+            font-weight: bold;
+        }
+        .content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+          <!-- Sidebar -->
+          <div class="col-md-0 sidebar">
+            <button class="btn btn-link active"><i class="fas fa-home"></i> Home</button>
+           <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>About</span>
+              <i class="fas fa-info-circle" style="margin-top: 5px;"></i>
+            </button>
+            <!-- Dropdown menu for Services -->
+            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <a class="dropdown-item" href="contactUs.html">Contact</a>
+              <a class="dropdown-item" href="careers.html">Careers</a>
+              <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+              <a class="dropdown-item" href="policy.html">Policy for conferences</a>
+              <a class="dropdown-item" href="privacy.html">Privacy</a>
+              <a class="dropdown-item" href="TOS.html">Terms of service</a>
+            </div>
+          </div>
+           <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Services</span>
+              <i class="fas fa-angle-down fas fa-cogs" style="margin-top: 5px;"></i>
+            </button>
+            <!-- Dropdown menu for Services -->
+            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <a class="dropdown-item" href="conference_create.html">Create Conference</a>
+              <a class="dropdown-item" href="License_info.html">License Info</a>
+              <a class="dropdown-item" href="learnmore.html">License Pricing</a>
+              <a class="dropdown-item" href="Faq.html">FAQ</a>
+            </div>
+          </div>
+          
+            <button class="btn btn-link"><i class="fas fa-address-book"></i> Contact</button>
+            <button class="btn btn-link justify-content-end"><i class="fas fa-cog"></i> Settings</button>
+    
+          </div>
+    <div class="col-md-11">
+        <div class="container mt-5">
+            <h1 class="header-title">EasyChair Conference Licenses: HowTo and Detailed Pricing</h1>
+            <div class="content mt-4" style="color: white;">
+                <h2>How to Purchase a License</h2>
+                <p>You can only purchase a license for a conference that is already <a href="index1.html" target="_blank" style="color: white;"><u>created in EasyChair</u></a>.</p>
+                <p>Once you create a conference, you will have a role of a conference manager for your conference and will be able to access your license information, billing, invoices, receipts, and payment information from the license manager environment.</p>
+            </div>
+        </div>
+        <div class="container mt-5" style="color: white;">
+            <h2>Payment Plans</h2>
+            <p>For non-free licenses there are three payment plans:</p>
+            <ol>
+                <li><strong>Fixed price.</strong> The license must be prepaid. The advantage of having it is that once you have paid, you will not have to pay more even if the number of submissions on your license is exceeded. This is the simplest and the cheapest plan. You will pay only once and can pay either by credit card or by bank transfer.</li>
+                <li><strong>Pay as you go.</strong> You register a credit card with us and your card will be charged one or more times for the actual number of submissions. We will inform you a week in advance before we charge your card. This plan is convenient if you are not sure about the number of submissions. It is about more expensive than the fixed price plan. Professional licenses can only be pay-as-you-go.</li>
+                <li><strong>Deposit and final payment.</strong> With this plan you first pay a deposit for the minimum number of submissions and then the final payment for the actual number of submissions, provided it exceeds the minimum. You can pay either by credit card or by bank transfer. This is the most expensive plan.</li>
+            </ol>
+
+            <h2>License Prices </h2>
+            <p>For executive and VIP licenses you will be asked to select the <strong>minimum number of submissions</strong>. If you select a larger number, you will receive a <strong>discount of up to 40%</strong>, see below, but you will also have to pay a non-refundable deposit for the minimum number.</p>
+            <br>
+            <table class="table table-bordered">
+                
+                    
+                    <thead>
+                        <tr class="highlight-header">
+                        <th>Plan</th>
+                        <th>Setup fee</th>
+                        <th>No minimum</th>
+                        <th>Minimum 200</th>
+                        <th>Minimum 300</th>
+                        <th>Minimum 500</th>
+                        <th>Minimum 1000</th>
+                        <th>Maximum submissions</th>
+                        </tr>
+                    </thead>
+                
+                <tbody>
+                    <tr class="highlight-header">
+                        <td colspan="8" class="center-text">Free License</td>
+                    </tr>
+                    <tr class="highlight-pink">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>20</td>
+                    </tr>
+                    <tr class="highlight-header">
+                        <td colspan="8" class="center-text">Professional License</td>
+                    </tr>
+                    <tr class="highlight-yellow">
+                        <td>pay as you go</td>
+                        <td></td>
+                        <td class="highlight-yellow" data-price-gbp="2.90">2.90 GBP</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>20</td>
+                    </tr>
+                    <tr class="highlight-header">
+                        <td colspan="8" class="center-text">Executive License</td>
+                    </tr>
+                    <tr class="highlight-light-pink">
+                        <td>Fixed price</td>
+                        <td></td>
+                        <td class="highlight-green" data-price-gbp="4.50">4.50 GBP</td>
+                        <td class="highlight-green" data-price-gbp="4.10">4.10</td>
+                        <td class="highlight-green" data-price-gbp="3.60">3.60</td>
+                        <td class="highlight-green" data-price-gbp="3.20">3.20</td>
+                        <td class="highlight-green" data-price-gbp="2.70">2.70</td>
+                        <td ></td>
+                        
+                    </tr>
+                    <tr class="highlight-light-pink">
+                        <td>Pay as you go</td>
+                        <td></td>
+                        <td class="highlight-green" data-price-gbp="4.90">4.90</td>
+                        <td class="highlight-green" data-price-gbp="4.40">4.40</td>
+                        <td class="highlight-green" data-price-gbp="3.90">3.90</td>
+                        <td class="highlight-green" data-price-gbp="3.40">3.40</td>
+                        <td class="highlight-green" data-price-gbp="2.90">2.90</td>
+                        <td></td>
+                    </tr>
+                    <tr class="highlight-light-pink">
+                        <td>Deposit and final payment</td>
+                        <td></td>
+                        <td class="highlight-green" data-price-gbp="5.40">5.40</td>
+                        <td class="highlight-green" data-price-gbp="4.90">4.90</td>
+                        <td class="highlight-green" data-price-gbp="4.30">4.30</td>
+                        <td class="highlight-green" data-price-gbp="3.80">3.80</td>
+                        <td class="highlight-green" data-price-gbp="3.20">3.20</td>
+                        <td></td>
+                    </tr>
+                    <tr class="highlight-header">
+                        <td colspan="8" class="center-text">VIP License</td>
+                    </tr>
+                    <tr class="highlight-blue">
+                        <td>Fixed price</td>
+                        <td class="highlight-light-blue" data-price-gbp="1000.00">1,000.00 GBP</td>
+                        <td class="highlight-light-blue" data-price-gbp="8.00">8.00</td>
+                        <td class="highlight-light-blue" data-price-gbp="7.20">7.20</td>
+                        <td class="highlight-light-blue" data-price-gbp="6.40">6.40</td>
+                        <td class="highlight-light-blue" data-price-gbp="5.60"> 5.60</td>
+                        <td class="highlight-light-blue" data-price-gbp="4.80">4.80</td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr class="highlight-blue">
+                        <td>Pay as you go</td>
+                        <td class="highlight-light-blue" data-price-gbp="1100.00">1,100.00 GBP</td>
+                        <td class="highlight-light-blue" data-price-gbp="8.90">8.90</td>
+                        <td class="highlight-light-blue" data-price-gbp="8.00">8.00</td>
+                        <td class="highlight-light-blue" data-price-gbp="7.10	">7.10</td>
+                        <td class="highlight-light-blue" data-price-gbp="6.20">6.20</td>
+                        <td class="highlight-light-blue" data-price-gbp="5.30">5.30</td>
+                        <td></td>
+                    </tr>
+                    <tr class="highlight-blue">
+                        <td>Deposit and final payment</td>
+                        <td class="highlight-light-blue" data-price-gbp="1200.00">1,200.00 GBP</td>
+                        <td class="highlight-light-blue" data-price-gbp="9.90">9.90</td>
+                        <td class="highlight-light-blue" data-price-gbp="8.90">8.90</td>
+                        <td class="highlight-light-blue" data-price-gbp="7.90	">7.90	</td>
+                        <td class="highlight-light-blue" data-price-gbp="6.90">6.90</td>
+                        <td class="highlight-light-blue" data-price-gbp="5.90	">5.90	</td>
+                        <td></td>
+                    </tr>
+                
+                </tbody>
+            </table>
+
+            <h3>Other Currencies</h3>
+            <p>We accept multiple currencies. You can view prices in 
+                <a href="#" onclick="changeCurrency('AUD')" style="color: white;"><u>AUD</u></a>, 
+                <a href="#" onclick="changeCurrency('CAD') " style="color: white;"><u>CAD</u></a>, 
+                <a href="#" onclick="changeCurrency('CHF')" style="color: white;"><u>CHF</u></a>, 
+                <a href="#" onclick="changeCurrency('EUR')" style="color: white;"><u>EUR</u></a>, 
+                <a href="#" onclick="changeCurrency('GBP')" style="color: white;"><u>GBP</u></a>, 
+                <a href="#" onclick="changeCurrency('HKD')" style="color: white;"><u>HKD</u></a>, 
+                <a href="#" onclick="changeCurrency('JPY')" style="color: white;"><u>JPY</u></a>, 
+                <a href="#" onclick="changeCurrency('NOK')" style="color: white;"><u>NOK</u></a>, 
+                <a href="#" onclick="changeCurrency('SEK')" style="color: white;"><u>SEK</u></a>, 
+                <a href="#" onclick="changeCurrency('SGD')" style="color: white;"><u>SGD</u></a>, 
+                <a href="#" onclick="changeCurrency('USD')" style="color: white;"><u>USD</u></a>. 
+                For pay-as-you-go plans we (temporarily) accept only USD, EUR and GBP.
+            </p><br>
+        </div>
+    </div>
+    <!-- Right Sidebar -->
+    <div class="right-sidebar">
+        <div class="dropdown">
+          <button class="btn btn-link dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <i class="fas fa-user"></i>
+              Profile
+            </div>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="/TESTABCDE.HTML"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a class="dropdown-item" href="/profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" style="background-color: #4e6a89; color:#fff; padding: 20px;"> <!-- Added padding to the container -->
+    <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: left; margin-left: 100px; margin-right:20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">SERVICES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Conference management</a></li>
+                    <li><a href="registration_info.html" style="color: #fff;">Registration</a></li>
+                    <li><a href="publishing_info.html" style="color: #fff;">Publishing</a></li>
+                    <li><a href="smartcfp.html" style="color: #fff;">Smart CFP</a></li>
+                    <li><a href="/smart_slide" style="color: #fff;">Smart Slide</a></li>
+                    <li><a href="/smart_program" style="color: #fff;">Smart Program</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 40px; margin-left:0px;"> <!-- Adjusted margin-left -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">ABOUT US</span>
+                    <li><a href="overview.html" style="color: #fff;">Overview</a></li>
+                    <li><a href="contactUs.html" style="color: #fff;">Contact</a></li>
+                    <li><a href="careers.html" style="color: #fff;">Careers</a></li>
+                    <li><a href="testimonials.html" style="color: #fff;">Testimonials</a></li>
+                    <li><a href="policy.html" style="color: #fff;">Policy for conferences</a></li>
+                    <li><a href="privacy.html" style="color: #fff;">Privacy</a></li>
+                    <li><a href="/terms" style="color: #fff;">Terms of service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">CONFERENCES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Create conference</a></li>
+                    <li><a href="License_info.html" style="color: #fff;">Licenses and pricing</a></li>
+                    <li><a href="/faq" style="color: #fff;">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 100px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul class="qlinks" style="list-style-type: none; padding: 0;">
+                    <li>
+                        <span class="bold contact-us">CONTACT US</span>
+                    </li>
+                    <li style="display: inline-block; margin-right: 10px;"> <!-- Adjusted margin-right -->
+                        <a title="Linked In" href="https://www.linkedin.com/company/easychair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img title="Linked In" alt="Linked In" src="/templates/images/images.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                    <li style="display: inline-block;"> <!-- Adjusted margin-right -->
+                        <a title="Twitter" href="https://twitter.com/WeEasyChair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img class="twitter-icon" alt="Twitter" title="Twitter" src="/templates/images/124021.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #39516b; color:#fff; padding: 20px;"> 
+    <div class="stripe colors-copyright">
+        <div class="segment">
+            <div class="content-row">
+                <div class="to-center" style="text-align: center;"> <!-- Added text-align: center; -->
+                    Copyright © 2002-2024 EasyChair
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    const exchangeRates = {
+        'AUD': 1.84,
+        'CAD': 1.73,
+        'CHF': 1.21,
+        'EUR': 1.16,
+        'GBP': 1.00,
+        'HKD': 9.45,
+        'JPY': 156.93,
+        'NOK': 13.53,
+        'SEK': 13.26,
+        'SGD': 1.71,
+        'USD': 1.37
+    };
+
+    function changeCurrency(currency) {
+        const rate = exchangeRates[currency];
+        const priceCells = document.querySelectorAll('[data-price-gbp]');
+        
+        priceCells.forEach(cell => {
+            const priceInGBP = parseFloat(cell.getAttribute('data-price-gbp'));
+            const priceInCurrency = (priceInGBP * rate).toFixed(2);
+            cell.innerText = `${priceInCurrency} ${currency}`;
+        });
+    }
+</script>
+
+</body>
+</html>

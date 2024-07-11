@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  <style>
+    .sidebar {
+        height: 100vh;
+        /*background-color: rgba(248, 249, 250, 0.7); */
+        width: 70px; /* Adjust width as needed */
+      }
+      /* Style for sidebar links */
+      .sidebar button {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #2441e3; /* Text color */
+        display: block;
+      }
+      /* Active link style */
+      .sidebar button.active {
+        background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+        color: #fff; /* White text color */
+      }
+      /* Adjustments for the right sidebar */
+      .right-sidebar {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 90px; /* Adjust width as needed */
+      }
+      /* Style for right sidebar links */
+      .right-sidebar a,
+      .right-sidebar button {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #2441e3; /* Text color */
+        display: block;
+      }
+      /* Active link style for right sidebar */
+      .right-sidebar a.active,
+      .right-sidebar button.active {
+        background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+        color: #fff; /* White text color */
+      }
+      body {
+        background-image: url('/templates/images/istockphoto-1358004763-612x612.jpg'); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%; /* Set height to fill entire viewport */
+      }
+      /* Adjust the size of icons */
+      .dropdown-menu .dropdown-item {
+        color: #333; /* Text color */
+      }
+      
+     
+    .careers-header {
+        font-size: 24px;
+        font-weight: bold;
+        color: #0056b3;
+    }
+    .careers-container {
+        margin-top: 40px;
+    }
+    .careers-list li {
+        margin-bottom: 10px;
+    }
+    .header-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-0 sidebar">
+        <button class="btn btn-link active"><i class="fas fa-home"></i> Home</button>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>About</span>
+          <i class="fas fa-info-circle" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="contactUs.html">Contact</a>
+          <a class="dropdown-item" href="careers.html">Careers</a>
+          <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+          <a class="dropdown-item" href="policy.html">Policy for conferences</a>
+          <a class="dropdown-item" href="privacy.html">Privacy</a>
+          <a class="dropdown-item" href="TOS.html">Terms of service</a>
+        </div>
+      </div>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>Services</span>
+          <i class="fas fa-angle-down fas fa-cogs" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="conference_create.html">Create Conference</a>
+          <a class="dropdown-item" href="License_info.html">License Info</a>
+          <a class="dropdown-item" href="learnmore.html">License Pricing</a>
+          <a class="dropdown-item" href="Faq.html">FAQ</a>
+        </div>
+      </div>
+      
+        <button class="btn btn-link"><i class="fas fa-address-book"></i> Contact</button>
+        <button class="btn btn-link justify-content-end"><i class="fas fa-cog"></i> Settings</button>
+
+      </div>
+      
+      
+<div class="container policy-container" style="padding-top: 30px; padding-bottom:30px;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="header-container">
+               
+                <h1><div class="policy-header">Privacy in EasyChair</div></h1>  
+            </div><br>
+            <p>This page outlines our practices regarding the use of your personal and conference data.</p>
+            <h4>1. Use of Personal Information by Conference Organizers</h4>
+            <p>We collect data typically required by conference organizers, including your name, email address, mailing address, web page, country, affiliation, and phone number.</p>
+            <h4>2. Cross-Conference Data</h4>
+            <p>We do not share any personal data across different conferences. For instance, when you submit a paper, we will not disclose whether this or a similar paper has been submitted elsewhere. Additionally, we will not share any review information from one conference with organizers of another conference, even if both are part of the same series. However, we cannot prevent individual conference organizers from sharing this information.</p>
+            <h4>3. Use of Personal Information by EasyChair</h4>
+            <p>This section details our policy on handling your data beyond what is used by conference organizers as described in Sections 1 and 2, with exceptions noted in Section 5. We do not sell, distribute, or share your personal data with any external organization. We do not access data from any conference using EasyChair. Access to this data is limited to those who have it as a result of their roles in the conference. For example, access to a review on a submission is restricted to:</p>
+            <ul>
+                <li>The reviewer who wrote it</li>
+                <li>The conference chairs</li>
+                <li>The program committee member handling the review</li>
+                <li>Program committee members granted access by the chairs</li>
+                <li>The authors of the submission, if the chairs decide to share the review</li>
+            </ul>
+            <p>For most EasyChair services, data controllers are our users: conferences, reviewers, authors, and registrants. Exceptions include publishing services (publications, EasyChair Preprints, and Smart CFP), where you give explicit consent to publish.</p>
+            <p>EasyChair collects the following information to provide our services:</p>
+            <ul>
+                <li>Account data when you create or update your EasyChair account, including your name, email, organization, country, login name, and encrypted password. You can also provide your address and phone number optionally.</li>
+                <li>Payment information and history when you make payments, adhering to PCI security standards (e.g., we do not store credit card numbers).</li>
+                <li>Information about authors, editors, managers, and published content when using our publishing services.</li>
+                <li>IP addresses used to access our services.</li>
+                <li>Information on how you interact with our services, including access dates, times, and published content accessed, sometimes collected through cookies.</li>
+                <li>A list of your co-authors and co-reviewers, which you can edit.</li>
+                <li>The history of your customer support requests.</li>
+                <li>The list of conferences you manage and your roles in these conferences.</li>
+            </ul>
+            <h4>4. Cookies</h4>
+            <p>The EasyChair website uses cookies, small files of letters and numbers placed on your computer with your consent. These cookies help distinguish you from other users, enhancing your experience and improving the website. Cookies are necessary for secure user authentication. We only use secure cookies and do not employ third-party cookies, thus preventing third parties from collecting information about your use of EasyChair.</p>
+            <h4>5. Abuse of Services Provided by EasyChair</h4>
+            <p>We reserve the right to intervene in conference management or access personal and conference information under the following circumstances:</p>
+            <ul>
+                <li>Reports of substantial abuse of EasyChair, such as (a) sending unsolicited emails unrelated to intended use, or (b) using submission facilities for purposes other than those intended by conference organizers.</li>
+                <li>Security features indicating attacks on EasyChair or repeated unauthorized data access attempts.</li>
+            </ul>
+            <p>In such cases, our intervention will be limited to the extent necessary to investigate the issue.</p>
+        </div>
+    </div>
+</div>
+
+
+      
+      
+<!-- Right Sidebar -->
+<div class="right-sidebar">
+  <div class="dropdown">
+    <button class="btn btn-link dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <i class="fas fa-user"></i>
+        Profile
+      </div>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="profileDropdown">
+      <a class="dropdown-item" href="/TESTABCDE.HTML"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+      <a class="dropdown-item" href="/profile.html"><i class="fas fa-user"></i> Profile</a>
+      <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="container-fluid" style="background-color: #4e6a89; color:#fff; padding: 20px;"> <!-- Added padding to the container -->
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: left; margin-left: 100px; margin-right:20px;"> <!-- Adjusted margin-right -->
+      <div class="qlinks">
+          <ul>
+              <span class="bold">SERVICES</span>
+              <li><a href="conference_create.html" style="color: #fff;">Conference management</a></li>
+              <li><a href="registration_info.html" style="color: #fff;">Registration</a></li>
+              <li><a href="publishing_info.html" style="color: #fff;">Publishing</a></li>
+              <li><a href="smartcfp.html" style="color: #fff;">Smart CFP</a></li>
+              <li><a href="/smart_slide" style="color: #fff;">Smart Slide</a></li>
+              <li><a href="/smart_program" style="color: #fff;">Smart Program</a></li>
+          </ul>
+      </div>
+  </div>
+  <div style="text-align: auto; margin-right: 40px; margin-left:0px;"> <!-- Adjusted margin-left -->
+      <div class="qlinks">
+          <ul>
+              <span class="bold">ABOUT US</span>
+              <li><a href="overview.html" style="color: #fff;">Overview</a></li>
+              <li><a href="contactUs.html" style="color: #fff;">Contact</a></li>
+              <li><a href="careers.html" style="color: #fff;">Careers</a></li>
+              <li><a href="testimonials.html" style="color: #fff;">Testimonials</a></li>
+              <li><a href="policy.html" style="color: #fff;">Policy for conferences</a></li>
+              <li><a href="privacy.html" style="color: #fff;">Privacy</a></li>
+              <li><a href="/terms" style="color: #fff;">Terms of service</a></li>
+          </ul>
+      </div>
+  </div>
+  <div style="text-align: auto; margin-right: 20px;"> <!-- Adjusted margin-right -->
+      <div class="qlinks">
+          <ul>
+              <span class="bold">CONFERENCES</span>
+              <li><a href="conference_create.html" style="color: #fff;">Create conference</a></li>
+              <li><a href="License_info.html" style="color: #fff;">Licenses and pricing</a></li>
+              <li><a href="/faq" style="color: #fff;">FAQ</a></li>
+          </ul>
+      </div>
+  </div>
+  <div style="text-align: auto; margin-right: 100px;"> <!-- Adjusted margin-right -->
+      <div class="qlinks">
+          <ul class="qlinks" style="list-style-type: none; padding: 0;">
+              <li>
+                  <span class="bold contact-us">CONTACT US</span>
+              </li>
+              <li style="display: inline-block; margin-right: 10px;"> <!-- Adjusted margin-right -->
+                  <a title="Linked In" href="https://www.linkedin.com/company/easychair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                      <img title="Linked In" alt="Linked In" src="/templates/images/images.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                  </a>
+              </li>
+              <li style="display: inline-block;"> <!-- Adjusted margin-right -->
+                  <a title="Twitter" href="https://twitter.com/WeEasyChair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                      <img class="twitter-icon" alt="Twitter" title="Twitter" src="/templates/images/124021.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+</div>
+<div class="container-fluid" style="background-color: #39516b; color:#fff; padding: 20px;"> 
+<div class="stripe colors-copyright">
+  <div class="segment">
+      <div class="content-row">
+          <div class="to-center" style="text-align: center;"> <!-- Added text-align: center; -->
+              Copyright © 2002-2024 EasyChair
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

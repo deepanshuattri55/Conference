@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Information</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            height: 100vh;
+            /*background-color: rgba(248, 249, 250, 0.7); */
+            width: 70px; /* Adjust width as needed */
+          }
+          /* Style for sidebar links */
+          .sidebar button {
+            padding: 6px 12px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff; /* Text color */
+            display: block;
+          }
+          /* Active link style */
+          .sidebar button.active {
+            background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+            color: #fff; /* White text color */
+          }
+          /* Adjustments for the right sidebar */
+          .right-sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 90px; /* Adjust width as needed */
+          }
+          /* Style for right sidebar links */
+          .right-sidebar a,
+          .right-sidebar button {
+            padding: 6px 12px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff; /* Text color */
+            display: block;
+          }
+          /* Active link style for right sidebar */
+          .right-sidebar a.active,
+          .right-sidebar button.active {
+            background-color: rgba(0, 123, 255, 0.7); /* Transparent primary color */
+            color: #fff; /* White text color */
+          }
+          /* Fill background image to entire screen */
+          body {
+            background-image: url('/templates/images/images11111.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%; /* Set height to fill entire viewport */
+          }
+          /* Adjust the size of icons */
+          .dropdown-menu .dropdown-item {
+            color: #333; /* Text color */
+          }
+        
+        .card-header {
+            background-color: #f8f9fa00;
+            font-weight: bold;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+        .card-body ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .card-body ul li {
+            margin-bottom: 0.5rem;
+        }
+        .card-body ul li::before {
+            content: "\f00c"; /* Font Awesome check mark */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 0.5rem;
+        }
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .price {
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .vip-features {
+            margin-top: 1rem;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body {
+            flex: 1 1 auto;
+        }
+        .additional-info {
+            margin-top: 2rem;
+        }
+        .additional-info h5 {
+            margin-top: 1.5rem;
+            font-weight: bold;
+        }
+        .additional-info p {
+            margin-top: 0.5rem;
+        }
+        .info-list li {
+            margin-bottom: 0.5rem;
+        }
+        .info-list li a {
+            text-decoration: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .section-header {
+            background-color: #e9ecef;
+            font-weight: bold;
+            text-align: left;
+            padding-left: 8px;
+        }
+        .checkmark {
+            color: green;
+            font-size: 1.25rem;
+        }
+        .limits {
+            background-color: #ffffe0;
+        }
+        .hosting-support {
+            background-color: #e0f7fa;
+        }
+        .miscellaneous {
+            background-color: #fce4ec;
+        }
+        .authors-submissions {
+            background-color: #e8f5e9;
+        }
+        .reviewing {
+            background-color: #ffffe0;
+        }
+        .paper-bidding {
+            background-color: #e0f7fa;
+        }
+        .export-and-view {
+            background-color: #fce4ec;
+        }
+        .email-management{
+            background-color: #e8f5e9;
+        }
+        .proceeding{
+            background-color: #ffffe0;
+        }
+        .page-generation{
+            background-color: #e0f7fa;
+        }
+        .highlight-yellow{
+            background-color: #cee85d;
+        }
+        .highlight-red {
+            background-color: #fba2a2;
+        }
+        .highlight-pink {
+            background-color: pink;
+        }
+        .highlight-blue {
+            background-color: rgb(182, 182, 253);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+          <!-- Sidebar -->
+          <div class="col-md-0 sidebar">
+            <button class="btn btn-link active"><i class="fas fa-home"></i> Home</button>
+           <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>About</span>
+              <i class="fas fa-info-circle" style="margin-top: 5px;"></i>
+            </button>
+            <!-- Dropdown menu for Services -->
+            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <a class="dropdown-item" href="contactUs.html">Contact</a>
+              <a class="dropdown-item" href="careers.html">Careers</a>
+              <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+              <a class="dropdown-item" href="policy.html">Policy for conferences</a>
+              <a class="dropdown-item" href="privacy.html">Privacy</a>
+              <a class="dropdown-item" href="TOS.html">Terms of service</a>
+            </div>
+          </div>
+           <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Services</span>
+              <i class="fas fa-angle-down fas fa-cogs" style="margin-top: 5px;"></i>
+            </button>
+            <!-- Dropdown menu for Services -->
+            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <a class="dropdown-item" href="conference_create.html">Create Conference</a>
+              <a class="dropdown-item" href="License_info.html">License Info</a>
+              <a class="dropdown-item" href="learnmore.html">License Pricing</a>
+              <a class="dropdown-item" href="Faq.html">FAQ</a>
+            </div>
+          </div>
+          
+            <button class="btn btn-link"><i class="fas fa-address-book"></i> Contact</button>
+            <button class="btn btn-link justify-content-end"><i class="fas fa-cog"></i> Settings</button>
+    
+          </div>
+    <div class="container">
+        <div class="container my-5">
+            <h1 class="text-center mb-4" style="color: white;">World's number one conference management application</h1>
+            <p class="text-center mb-5" style="color: white;">
+                It includes all you need: submissions, reviewing, and program generation. 
+                It comes with a remarkable number of features and is optimized for large conferences. 
+                We have four kinds of licenses: free, professional, executive, and VIP.
+            </p>
+            <div class="row">
+                <!-- Free Plan -->
+                <div class="col-md-4">
+                    <div class="card mb-4 h-100">
+                        <div class="card-header">Free</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Free</h5>
+                            <p class="price" id="free-price">Maximum 20 submissions</p>
+                            <ul>
+                                <li>Support for submissions and reviewing</li>
+                                <li>Hosting on a secure high-performance server</li>
+                                <li>Data backup and replication</li>
+                                <li>Many options to handle various submission and reviewing models</li>
+                                <li>Highly customizable submission form</li>
+                                <li>Highly customizable review form</li>
+                                <li>Support for double and triple blind reviewing</li>
+                                <li>Customizable decisions</li>
+                                <li>Submission topics</li>
+                                <li>Submission assignment</li>
+                                <li>Paper bidding</li>
+                                <li>Use of external reviewers (subreviewers)</li>
+                                <li>Email to authors and reviewers, email log</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-block">Create Conference</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Plan -->
+                <div class="col-md-4">
+                    <div class="card mb-4 h-100">
+                        <div class="card-header">Professional</div>
+                        <div class="card-body">
+                            <h5 class="card-title" id="professional-price">£2.90 per submission</h5>
+                            <p class="price">Maximum 60 submissions, credit card payment only</p>
+                            <ul>
+                                <li>All free license features +</li>
+                                <li>Smart program module</li>
+                                <li>Import of configuration from other conferences</li>
+                                <li>Multi-track version</li>
+                                <li>Excel and CSV conference data export</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-secondary btn-block">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Executive and VIP Plan -->
+                <div class="col-md-4">
+                    <div class="card mb-4 h-100">
+                        <div class="card-header" style="background-color: rgb(255, 255, 255);">Executive and VIP</div>
+                        <div class="card-body">
+                            <h5 class="card-title" id="executive-price">from £4.50 per submission</h5>
+                            <p class="price">Unlimited number of submissions</p>
+                            <ul>
+                                <li>All professional license features +</li>
+                                <li>Helpdesk and technical support</li>
+                                <li>Choice of a payment plan (fixed price, pay as you go, deposit and final payment)</li>
+                                <li>Proceedings module</li>
+                                <li>Integration with several external services: IEEE copyright management, ACM proceedings, Springer proceedings</li>
+                                <li>Email templates</li>
+                                <li>Analytics in Excel and PowerPoint</li>
+                                <li>Rebuttal phase</li>
+                                <li>Various data views</li>
+                            </ul>
+                            <div class="vip-features">
+                                <h6 class="mt-3">VIP license features</h6>
+                                <ul>
+                                    <li>All executive license features +</li>
+                                    <li>Dedicated support by an assigned EasyChair manager</li>
+                                    <li>Joint smart program for collocated conferences</li>
+                                    <li>Large video submissions (up to 300 Mbytes each)</li>
+                                    <li>Need something else? Ask!</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="learnmore.html" class="btn btn-warning btn-block">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-info" style="color: white;">
+                <ul class="info-list">
+                    <li>1. We work with multiple currencies. You can view prices in 
+                        <a href="#" onclick="changeCurrency('AUD')" style="color: rgb(218, 240, 51);"><u>AUD</u></a>, 
+                        <a href="#" onclick="changeCurrency('CAD')" style="color: rgb(218, 240, 51);"><u>CAD</u></a>, 
+                        <a href="#" onclick="changeCurrency('CHF')" style="color: rgb(218, 240, 51);"><u>CHF</u></a>, 
+                        <a href="#" onclick="changeCurrency('EUR')" style="color: rgb(218, 240, 51);"><u>EUR</u></a>, 
+                        <a href="#" onclick="changeCurrency('GBP')" style="color: rgb(218, 240, 51);"><u>GBP</u></a>, 
+                        <a href="#" onclick="changeCurrency('HKD')" style="color: rgb(218, 240, 51);"><u>HKD</u></a>, 
+                        <a href="#" onclick="changeCurrency('JPY')" style="color: rgb(218, 240, 51);"><u>JPY</u></a>, 
+                        <a href="#" onclick="changeCurrency('NOK')" style="color: rgb(218, 240, 51);"><u>NOK</u></a>, 
+                        <a href="#" onclick="changeCurrency('SEK')" style="color: rgb(218, 240, 51);"><u>SEK</u></a>, 
+                        <a href="#" onclick="changeCurrency('SGD')" style="color: rgb(218, 240, 51);"><u>SGD</u></a>, and 
+                        <a href="#" onclick="changeCurrency('USD')" style="color: rgb(218, 240, 51);"><u>USD</u></a>.
+                    </li>
+                    <li>2. Volume discounts are possible when you sign for 200+ submissions, up to 
+                        <strong>40% discount</strong> when you sign for 1000+ submissions.
+                    </li>
+                    <li>3. Professional license prices require credit card payments (pay-as-you-go plan).
+                        Executive and VIP license prices are valid for fixed price plans, based on prepayment. Other plans may involve higher fees.
+                        VIP licenses have a setup fee of £1,000.00.
+                    </li>
+                    <li>4. <strong>NEW!</strong> EasyChair has a <strong>special program</strong> for several countries, including India, Indonesia, Morocco, Vietnam, Ecuador, Colombia, Pakistan, Algeria, Ukraine, Philippines. If your conference is suitable for the program, you can be offered special prices. Contact our sales team for details.
+                    </li>
+                </ul>
+                <h5>Organization-Wide Licenses</h5>
+                <p>
+                    If you organize a substantial number of conferences annually or run a very large conference, you can gain from a special multi-year agreement. Contact our sales team to arrange an agreement.
+                </p>
+                <h5>Group License for a Conference or a Group of Conferences</h5>
+                <p>
+                    If your conference requires separate installations for parts of this conference (such as tracks, special sessions or doctoral consortium), or you have collocated conferences, use can use the same license for all conferences.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="text-center my-4" style="color:white;">Features Included in Licenses</h1>
+        <p class="text-center" style="color: white;">The table below shows features included in various licenses. Click on the feature column for further explanation.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Free</th>
+                    <th>Professional</th>
+                    <th>Executive</th>
+                    <th>VIP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="section-header">
+                    <td colspan="5">Limits</td>
+                </tr>
+                <tr class="limits">
+                    <td>Maximum submission size (Mb)</td>
+                    <td>20</td>
+                    <td>50</td>
+                    <td>100</td>
+                    <td>300</td>
+                </tr>
+                <tr class="limits">
+                    <td>Maximum number of submissions</td>
+                    <td>20</td>
+                    <td>60</td>
+                    <td>≥100</td>
+                    <td>≥1000</td>
+                </tr>
+                <tr class="limits">
+                    <td>Maximum number of reviewers</td>
+                    <td>200</td>
+                    <td>600</td>
+                    <td>≥1000</td>
+                    <td>≥1000</td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="5">Hosting and Support</td>
+                </tr>
+                <tr class="hosting-support">
+                    <td>Hosting on a high-performance server</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="hosting-support">
+                    <td>Data backup and replication</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="hosting-support">
+                    <td>Encrypted (secure) access only</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="hosting-support">
+                    <td>Access to demo version</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="hosting-support">
+                    <td>Helpdesk and technical support</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="hosting-support">
+                    <td>Dedicated EasyChair manager</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="5">Miscellaneous</td>
+                </tr>
+                <tr class="miscellaneous">
+                    <td>Import of configuration from other conferences</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="miscellaneous">
+                    <td>Branding</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="miscellaneous">
+                    <td>Multiple EasyChair email addresses</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="miscellaneous">
+                    <td>Analytics</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="miscellaneous">
+                    <td>IEEE copyright (eCF) integration</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="miscellaneous">
+                    <td>ACM ICPS data download</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="5">Authors and Submissions</td>
+                </tr>
+                <tr class="authors-submissions">
+                    <td>Support for anonymous submissions (double-blind reviewing)</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="authors-submissions">
+                    <td>Customized submission types</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="authors-submissions">
+                    <td>Author notification</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="authors-submissions">
+                    <td>Instructions for authors</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="authors-submissions">
+                    <td>Templates for authors</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="authors-submissions">
+                    <td>Terms and conditions for authors</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="authors-submissions">
+                    <td>Audio, video and zip file uploads</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="5">Reviewing</td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Event log</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Watchlist</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Online discussion of submissions</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Flexible access models for reviewers</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Senior program committee model</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Leading reviewer model</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Subreviewers</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Conflict of interest</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Reviewer invitations</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Submission topics</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Customized decisions (acceptance types)</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Customizable evaluation criteria</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Statistics</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Email to authors and reviewers</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Custom review forms and review attachments</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Instructions for reviewers</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Multi-track support</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Rebuttal phase</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Advanced conflict management</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Special reviewing models</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="reviewing">
+                    <td>Review forms in MSWord</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="5">Paper Bidding and Review Assignment</td>
+                </tr>
+                <tr class="paper-bidding">
+                    <td>Paper bidding</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="paper-bidding">
+                    <td>automatic submission assignment to reviewers</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="paper-bidding">
+                    <td>manual submission assignment to reviewers</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="paper-bidding">
+                    <td>constraints on paper assignment</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="paper-bidding">
+                    <td>Assignment upload</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="5">Data export and viewing</td>
+                </tr>
+                <tr class="export-and-view">
+                    <td>Excel and/or CSV data export</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="export-and-view">
+                    <td>Data views</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="5">Email management</td>
+                </tr>
+                <tr class="email-management">
+                    <td>email log</td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="email-management">
+                    <td>email templates plugin</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="5">Proceedings</td>
+                </tr>
+                <tr class="proceeding">
+                    <td>proceedings creation</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="section-header">
+                    <td colspan="5">Program and page generation using EasyChair Smart Program technology</td>
+                </tr>
+                <tr class="page-generation">
+                    <td>program generation and publishing</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>page editing</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>talks and sessions editing</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>assignment of talks to sessions</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>scheduling constraints</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>session chair handling</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>room handling</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>program manager handling</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>automatic schedule analysis</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>solutions</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>list of events</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>email to managers, authors, and session chairs</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>program download</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="page-generation">
+                    <td>multi-conference program generation</td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><strong><span class="checkmark">&#10007;</span></strong></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container mt-5" style="color: white;">
+        <h2>License Comparison</h2>
+        <p>The table below compares our licenses. Click on the features column for more explanation.</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Free</th>
+                    <th>Professional</th>
+                    <th>Executive</th>
+                    <th>VIP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="highlight-yellow">
+                    <td>Maximum submission size (Mb)</td>
+                    <td>20</td>
+                    <td>50</td>
+                    <td>100</td>
+                    <td>300</td>
+                </tr>
+                <tr class="highlight-yellow">
+                    <td>Maximum number of submissions</td>
+                    <td>20</td>
+                    <td>60</td>
+                    <td>100</td>
+                    <td>300</td>
+                </tr>
+                <tr class="highlight-yellow">
+                    <td>Maximum number of reviewers</td>
+                    <td>200</td>
+                    <td>600</td>
+                    <td>&ge;1000</td>
+                    <td>&ge;1000</td>
+                </tr>
+                <tr class="highlight-pink">
+                    <td>Multi-track support</td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-pink">
+                    <td>Program generation and publishing</td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-pink">
+                    <td>Import of configuration from other conferences</td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-pink">
+                    <td>Branding</td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-pink">
+                    <td>Multiple EasyChair email addresses</td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-pink">
+                    <td>Templates for authors</td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-pink">
+                    <td>Excel and/or CSV data export</td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Helpdesk and technical support</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Analytics</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>IEEE copyright (eCF) integration</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>ACM ICPS data download</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Terms and conditions for authors</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Audio, video and zip file uploads</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Rebuttal phase</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Advanced conflict management</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Special reviewing models</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Review forms in MSWord</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Assignment upload</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Data views</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Email templates plugin</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Proceedings creation</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-red">
+                    <td>Program download</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-blue">
+                    <td>Dedicated EasyChair manager</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+                <tr class="highlight-blue">
+                    <td>Multi-conference program generation</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="checkmark">&#10004;</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="right-sidebar">
+        <div class="dropdown">
+          <button class="btn btn-link dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <i class="fas fa-user"></i>
+              Profile
+            </div>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="/TESTABCDE.HTML"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a class="dropdown-item" href="/profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" style="background-color: #4e6a89; color:#fff; padding: 20px;"> <!-- Added padding to the container -->
+    <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: left; margin-left: 100px; margin-right:20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">SERVICES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Conference management</a></li>
+                    <li><a href="registration_info.html" style="color: #fff;">Registration</a></li>
+                    <li><a href="publishing_info.html" style="color: #fff;">Publishing</a></li>
+                    <li><a href="smartcfp.html" style="color: #fff;">Smart CFP</a></li>
+                    <li><a href="/smart_slide" style="color: #fff;">Smart Slide</a></li>
+                    <li><a href="/smart_program" style="color: #fff;">Smart Program</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 40px; margin-left:0px;"> <!-- Adjusted margin-left -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">ABOUT US</span>
+                    <li><a href="overview.html" style="color: #fff;">Overview</a></li>
+                    <li><a href="contactUs.html" style="color: #fff;">Contact</a></li>
+                    <li><a href="careers.html" style="color: #fff;">Careers</a></li>
+                    <li><a href="testimonials.html" style="color: #fff;">Testimonials</a></li>
+                    <li><a href="policy.html" style="color: #fff;">Policy for conferences</a></li>
+                    <li><a href="privacy.html" style="color: #fff;">Privacy</a></li>
+                    <li><a href="/terms" style="color: #fff;">Terms of service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">CONFERENCES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Create conference</a></li>
+                    <li><a href="License_info.html" style="color: #fff;">Licenses and pricing</a></li>
+                    <li><a href="/faq" style="color: #fff;">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 100px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul class="qlinks" style="list-style-type: none; padding: 0;">
+                    <li>
+                        <span class="bold contact-us">CONTACT US</span>
+                    </li>
+                    <li style="display: inline-block; margin-right: 10px;"> <!-- Adjusted margin-right -->
+                        <a title="Linked In" href="https://www.linkedin.com/company/easychair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img title="Linked In" alt="Linked In" src="/templates/images/images.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                    <li style="display: inline-block;"> <!-- Adjusted margin-right -->
+                        <a title="Twitter" href="https://twitter.com/WeEasyChair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img class="twitter-icon" alt="Twitter" title="Twitter" src="/templates/images/124021.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #39516b; color:#fff; padding: 20px;"> 
+    <div class="stripe colors-copyright">
+        <div class="segment">
+            <div class="content-row">
+                <div class="to-center" style="text-align: center;"> <!-- Added text-align: center; -->
+                    Copyright © 2002-2024 EasyChair
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script>
+        const exchangeRates = {
+            'AUD': 1.84,
+            'CAD': 1.73,
+            'CHF': 1.21,
+            'EUR': 1.16,
+            'GBP': 1.00,
+            'HKD': 9.45,
+            'JPY': 156.93,
+            'NOK': 13.53,
+            'SEK': 13.26,
+            'SGD': 1.71,
+            'USD': 1.37
+        };
+
+        const pricesInGBP = {
+            'professional': 2.90,
+            'executive': 4.50
+        };
+
+        function changeCurrency(currency) {
+            const rate = exchangeRates[currency];
+            document.getElementById('professional-price').innerText = `${(pricesInGBP.professional * rate).toFixed(2)} ${currency} per submission`;
+            document.getElementById('executive-price').innerText = `from ${(pricesInGBP.executive * rate).toFixed(2)} ${currency} per submission`;
+        }
+    </script>
+</body>
+</html>

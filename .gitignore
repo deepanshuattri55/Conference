@@ -1,0 +1,9 @@
+.venv/
+media/
+**/__pycache__/
+*/migrations/
+db.sqlite3
+*.pyc
+*.pyo
+*.pyd
+*.so

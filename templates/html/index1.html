@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="/templates/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-0 sidebar">
+        <button class="btn btn-link ">
+          <i class="fas fa-home"></i>
+          <a href="index.html" class="btn-link-white"> Home</a>
+      </button>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>About</span>
+          <i class="fas fa-info-circle" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="contactUs.html">Contact</a>
+          <a class="dropdown-item" href="careers.html">Careers</a>
+          <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+          <a class="dropdown-item" href="policy.html">Policy for conferences</a>
+          <a class="dropdown-item" href="privacy.html">Privacy</a>
+          <a class="dropdown-item" href="TOS.html">Terms of service</a>
+        </div>
+      </div>
+       <div class="dropdown">
+        <button class="btn btn-link dropdown-toggle d-flex flex-column align-items-center" type="button" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>Services</span>
+          <i class="fas fa-angle-down fas fa-cogs" style="margin-top: 5px;"></i>
+        </button>
+        <!-- Dropdown menu for Services -->
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="conference_create.html">Create Conference</a>
+          <a class="dropdown-item" href="License_info.html">License Info</a>
+          <a class="dropdown-item" href="learnmore.html">License Pricing</a>
+          <a class="dropdown-item" href="Faq.html">FAQ</a>
+        </div>
+      </div>
+      
+        <button class="btn btn-link"><i class="fas fa-address-book"></i> Contact</button>
+        <button class="btn btn-link justify-content-end"><i class="fas fa-cog"></i> Settings</button>
+
+      </div>
+      
+     <!-- Page content -->
+      <!-- Page content -->
+      <div class="col-md-11">
+        <div class="text-center">
+          <img src="/templates/images/logoEC.png" alt="Logo" style="margin-top: 50px;">
+          <p class="appealing-text" style="margin-bottom: 40px;">You are the chairperson of a conference, and we provide everything you require.<br>
+                                      We provide everything you require, including the conference registration system.<br>
+                                      We utilize a single platform called EasyChair.</p>
+        </div>
+        <div class="card-deck">
+          <div class="card transparent-card" style="width: 18rem;">
+            <img src="/templates/images/th.jpeg" class="card-img-top" alt="Thumbnail Image of Conference Hall" style="max-width: 150px; margin-top: 10px; margin-left: auto; margin-right: auto; display: block;">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;"><a href="conference_create.html" style="text-decoration: underline; color: rgb(34, 33, 33);">Conference management system</a></h5>
+              <p class="card-text">Our EasyChair system offers comprehensive support, from overseeing program committees to publishing proceedings. With a user base exceeding 4.00 million and 114,934 conferences, our track record demonstrates our expertise in efficiently managing conferences from inception to completion.</p>
+              <a href="conference_create.html" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+          <div class="card transparent-card" style="width: 18rem;">
+            <img src="/templates/images/th1.jpeg" class="card-img-top" alt="..." style="max-width: 150px; margin-top: 10px; margin-left: auto; margin-right: auto; display: block;">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;"><a href="registration_info.html" style="text-decoration: underline; color: rgb(34, 33, 33);">Regestration</a></h5>
+
+              <p class="card-text">
+                We have the capability to design intricate registration forms tailored to your needs, ensuring a seamless attendee registration process that can be set up swiftly within hours. Additionally, we facilitate online payments in 14 different currencies, simplifying the transaction process. Furthermore, authors and reviewers can utilize the same platform they used for submission and review when registering.</p>
+              <a href="registration_info.html" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+          <div class="card transparent-card" style="width: 18rem;">
+            <img src="/templates/images/Firefly 20240513000143.png" class="card-img-top" alt="Firefly Logo" style="max-width: 135px; margin-top: 10px; margin-left: auto; margin-right: auto; display: block;">
+
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;"><a href="publishing_info.html" style="text-decoration: underline; color: rgb(34, 33, 33);">Publishing</a></h5>
+              <p class="card-text">Our publishing services encompass a wide spectrum of disciplines, spanning from computing to health sciences (refer to the complete list). These services offer expedited and adaptable publication of proceedings and compilations across diverse scientific domains. Furthermore, our publication services seamlessly integrate with conference management, ensuring a smooth transition from content submission to publication after review.</p>
+              <a href="publishing_info.html" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Sidebar -->
+      <div class="right-sidebar">
+        <div class="dropdown">
+          <button class="btn btn-link dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <i class="fas fa-user"></i>
+              Profile
+            </div>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="/TESTABCDE.HTML"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a class="dropdown-item" href="/profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- New section for total traffic with grey background -->
+  <div class="container-fluid" style="background-color: #5c5555; padding: 20px;">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>Total Site Traffic</h3>
+        <p>Insert the total traffic information here...</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="padding: 20px;;">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>Thousands of customers trust EasyChair, including:</h3>
+      </div>
+    </div>
+  </div>
+  <hr style="border: none; border-top: 1px solid #ccc; width: 1000px; margin: 20px auto;">
+  
+  <!-- Supporting Brands section -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>Supporting Brands</h3>
+        <!-- Google logo -->
+        <img src="/templates/images/Google-Logo.png" alt="Google Logo" style="max-width: 150px; margin-right:50px;">
+        <!-- Microsoft logo -->
+        <img src="/templates/images/microsoft-logo.svg" alt="Microsoft Logo" style="max-width: 150px; margin-right:50px;">
+        <!-- IBM logo -->
+        <img src="/templates/images/IBM-Logo-1967-1972.png" alt="IBM Logo" style="max-width: 150px; margin-right:50px;">
+        <!-- Intel logo -->
+        <img src="/templates/images/Intel-Logo-PNG-Image.png" alt="Intel Logo" style="max-width: 150px;">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Horizontal rule to distinguish the next section -->
+  <hr style="border: none; border-top: 1px solid #ccc; width: 1000px; margin: 20px auto;">
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>Supporting Brands</h3>
+        <!-- Google logo -->
+        <img src="/templates/images/Google-Logo.png" alt="Google Logo" style="max-width: 100px;">
+        <!-- Microsoft logo -->
+        <img src="/templates/images/microsoft-logo.svg" alt="Microsoft Logo" style="max-width: 100px;">
+        <!-- IBM logo -->
+        <img src="/templates/images/IBM-Logo-1967-1972.png" alt="IBM Logo" style="max-width: 100px;">
+        <!-- Intel logo -->
+        <img src="/templates/images/Intel-Logo-PNG-Image.png" alt="Intel Logo" style="max-width: 100px;">
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #4e6a89; color:#fff; padding: 20px;"> <!-- Added padding to the container -->
+    <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: left; margin-left: 100px; margin-right:20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">SERVICES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Conference management</a></li>
+                    <li><a href="registration_info.html" style="color: #fff;">Registration</a></li>
+                    <li><a href="publishing_info.html" style="color: #fff;">Publishing</a></li>
+                    <li><a href="smartcfp.html" style="color: #fff;">Smart CFP</a></li>
+                    <li><a href="/smart_slide" style="color: #fff;">Smart Slide</a></li>
+                    <li><a href="/smart_program" style="color: #fff;">Smart Program</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 40px; margin-left:0px;"> <!-- Adjusted margin-left -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">ABOUT US</span>
+                    <li><a href="overview.html" style="color: #fff;">Overview</a></li>
+                    <li><a href="contactUs.html" style="color: #fff;">Contact</a></li>
+                    <li><a href="careers.html" style="color: #fff;">Careers</a></li>
+                    <li><a href="testimonials.html" style="color: #fff;">Testimonials</a></li>
+                    <li><a href="policy.html" style="color: #fff;">Policy for conferences</a></li>
+                    <li><a href="privacy.html" style="color: #fff;">Privacy</a></li>
+                    <li><a href="/terms" style="color: #fff;">Terms of service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 20px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul>
+                    <span class="bold">CONFERENCES</span>
+                    <li><a href="conference_create.html" style="color: #fff;">Create conference</a></li>
+                    <li><a href="License_info.html" style="color: #fff;">Licenses and pricing</a></li>
+                    <li><a href="/faq" style="color: #fff;">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: auto; margin-right: 100px;"> <!-- Adjusted margin-right -->
+            <div class="qlinks">
+                <ul class="qlinks" style="list-style-type: none; padding: 0;">
+                    <li>
+                        <span class="bold contact-us">CONTACT US</span>
+                    </li>
+                    <li style="display: inline-block; margin-right: 10px;"> <!-- Adjusted margin-right -->
+                        <a title="Linked In" href="https://www.linkedin.com/company/easychair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img title="Linked In" alt="Linked In" src="/templates/images/images.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                    <li style="display: inline-block;"> <!-- Adjusted margin-right -->
+                        <a title="Twitter" href="https://twitter.com/WeEasyChair" target="_blank"> <!-- Added target="_blank" to open link in a new tab -->
+                            <img class="twitter-icon" alt="Twitter" title="Twitter" src="/templates/images/124021.png" style="width: 30px; height: 30px;"> <!-- Adjusted image size -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #39516b; color:#fff; padding: 20px;"> 
+    <div class="stripe colors-copyright">
+        <div class="segment">
+            <div class="content-row">
+                <div class="to-center" style="text-align: center;"> <!-- Added text-align: center; -->
+                    Copyright © 2002-2024 EasyChair
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

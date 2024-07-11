@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: #f2f2f2; /* Set background color */
+        height: 100vh; /* Set height to fill entire viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Transparent form */
+    .card {
+        background-color: rgba(255, 255, 255, 0.564); /* Transparent white background with reduced opacity */
+
+    }
+    .image-container {
+        max-width: 40%; /* Set maximum width for the image container */
+        margin-right: 20px; /* Add some margin to create space between the image and form */
+    }
+    .image-container img {
+        width: 100%; /* Set image width to fill its container */
+        border-radius: 10px; /* Optional: Add border radius for rounded corners */
+    }
+    .form-container {
+        max-width: 60%; /* Set maximum width for the form container */
+    }
+</style>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <!-- Image Column -->
+            <div class="col-md-6 image-container">
+                <img src="Firefly 20240510151521.png" alt="Signup Image">
+            </div>
+            <!-- Form Column -->
+            <div class="col-md-6 form-container">
+                <div class="card">
+                    <div class="card-header">
+                        Signup
+                    </div>
+                    <div class="card-body">
+                        <form action="index.html" method="post">
+                            <!-- Your form content -->
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                  <label for="firstName">First Name</label>
+                                  <input type="text" class="form-control" id="firstName" name="firstName" required>
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="lastName">Last Name</label>
+                                  <input type="text" class="form-control" id="lastName" name="lastName" required>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="form-group col-md-6">
+                                  <label for="email">Email</label>
+                                  <input type="email" class="form-control" id="email" name="email" required>
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="confirmEmail">Confirm Email</label>
+                                  <input type="email" class="form-control" id="confirmEmail" name="confirmEmail" required>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="password">Password</label>
+                              <input type="password" class="form-control" id="password" name="password" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="confirmPassword">Confirm Password</label>
+                              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                          </div>
+                          <div class="form-row">
+                              <div class="form-group col-md-6">
+                                  <label for="gender">Gender</label>
+                                  <select id="gender" class="form-control" name="gender" required>
+                                      <option value="">Choose...</option>
+                                      <option value="male">Male</option>
+                                      <option value="female">Female</option>
+                                      <option value="other">Other</option>
+                                  </select>
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="age">Age</label>
+                                  <input type="number" class="form-control" id="age" name="age" required>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="organization">Organization</label>
+                              <input type="text" class="form-control" id="organization" name="organization">
+                          </div>
+                          <div class="form-group form-check">
+                              <input type="checkbox" class="form-check-input" id="acceptTerms" name="acceptTerms" required>
+                              <label class="form-check-label" for="acceptTerms">I accept the terms and conditions</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Signup</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

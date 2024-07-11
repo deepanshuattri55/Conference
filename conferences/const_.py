@@ -1,0 +1,23 @@
+TOPICS_CHOICES = [
+    ('accounting_finance', 'Accounting and Finance'),
+    ('art_humanities', 'Art and Humanities'),
+    ('biological_sciences', 'Biological Sciences'),
+    ('business_management', 'Business and Management'),
+    ('chemistry', 'Chemistry'),
+    ('civil_engineering', 'Civil Engineering'),
+    ('computing', 'Computing'),
+    ('earth_environmental_sciences', 'Earth and Environmental Sciences'),
+    ('economics', 'Economics'),
+    ('education_science', 'Education Science'),
+    ('energy', 'Energy'),
+    ('engineering', 'Engineering'),
+    ('genomics_bioinformatics', 'Genomics and Bioinformatics'),
+    ('health_sciences', 'Health Sciences'),
+    ('language_linguistics', 'Language and Linguistics'),
+    ('materials_science', 'Materials Science'),
+    ('mathematics_statistics', 'Mathematics and Statistics'),
+    ('mechanical_engineering', 'Mechanical Engineering'),
+    ('physics', 'Physics'),
+    ('social_sciences', 'Social Sciences'),
+    ('technology', 'Technology')
+]
